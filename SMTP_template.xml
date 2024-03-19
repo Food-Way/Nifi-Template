@@ -7,6 +7,7 @@
         <connections>
             <id>22faf445-d1ce-3271-0000-000000000000</id>
             <parentGroupId>f63adb24-d705-3b80-0000-000000000000</parentGroupId>
+            <versionedComponentId>22faf445-d1ce-3271-98cc-b34565b6a111</versionedComponentId>
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
             <destination>
@@ -27,12 +28,14 @@
                 <groupId>f63adb24-d705-3b80-0000-000000000000</groupId>
                 <id>28a38e8e-e185-37a7-0000-000000000000</id>
                 <type>PROCESSOR</type>
+                <versionedComponentId>28a38e8e-e185-37a7-8636-4470387fcb26</versionedComponentId>
             </source>
             <zIndex>0</zIndex>
         </connections>
         <connections>
             <id>282586b1-71b4-3870-0000-000000000000</id>
             <parentGroupId>f63adb24-d705-3b80-0000-000000000000</parentGroupId>
+            <versionedComponentId>282586b1-71b4-3870-8965-4129cf583317</versionedComponentId>
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
             <destination>
@@ -53,18 +56,21 @@
                 <groupId>f63adb24-d705-3b80-0000-000000000000</groupId>
                 <id>28a38e8e-e185-37a7-0000-000000000000</id>
                 <type>PROCESSOR</type>
+                <versionedComponentId>28a38e8e-e185-37a7-8636-4470387fcb26</versionedComponentId>
             </source>
             <zIndex>0</zIndex>
         </connections>
         <connections>
             <id>8c90ba39-4d89-36a8-0000-000000000000</id>
             <parentGroupId>f63adb24-d705-3b80-0000-000000000000</parentGroupId>
+            <versionedComponentId>8c90ba39-4d89-36a8-b1ee-35a4dbccac26</versionedComponentId>
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
             <destination>
                 <groupId>f63adb24-d705-3b80-0000-000000000000</groupId>
                 <id>b1cf4860-265e-34bd-0000-000000000000</id>
                 <type>PROCESSOR</type>
+                <versionedComponentId>b1cf4860-265e-34bd-be7f-a5962402e457</versionedComponentId>
             </destination>
             <flowFileExpiration>0 sec</flowFileExpiration>
             <labelIndex>1</labelIndex>
@@ -78,18 +84,21 @@
                 <groupId>f63adb24-d705-3b80-0000-000000000000</groupId>
                 <id>28a38e8e-e185-37a7-0000-000000000000</id>
                 <type>PROCESSOR</type>
+                <versionedComponentId>28a38e8e-e185-37a7-8636-4470387fcb26</versionedComponentId>
             </source>
             <zIndex>0</zIndex>
         </connections>
         <connections>
             <id>d96fab9e-6994-3b14-0000-000000000000</id>
             <parentGroupId>f63adb24-d705-3b80-0000-000000000000</parentGroupId>
+            <versionedComponentId>d96fab9e-6994-3b14-891e-4689bb566095</versionedComponentId>
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
             <destination>
                 <groupId>f63adb24-d705-3b80-0000-000000000000</groupId>
                 <id>070a4aeb-eda8-30e4-0000-000000000000</id>
                 <type>PROCESSOR</type>
+                <versionedComponentId>070a4aeb-eda8-30e4-8f15-29a60b92eab0</versionedComponentId>
             </destination>
             <flowFileExpiration>0 sec</flowFileExpiration>
             <labelIndex>1</labelIndex>
@@ -103,18 +112,21 @@
                 <groupId>f63adb24-d705-3b80-0000-000000000000</groupId>
                 <id>b1cf4860-265e-34bd-0000-000000000000</id>
                 <type>PROCESSOR</type>
+                <versionedComponentId>b1cf4860-265e-34bd-be7f-a5962402e457</versionedComponentId>
             </source>
             <zIndex>0</zIndex>
         </connections>
         <connections>
             <id>e99a487e-083e-364f-0000-000000000000</id>
             <parentGroupId>f63adb24-d705-3b80-0000-000000000000</parentGroupId>
+            <versionedComponentId>e99a487e-083e-364f-b6b1-6f4352c87ade</versionedComponentId>
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
             <destination>
                 <groupId>f63adb24-d705-3b80-0000-000000000000</groupId>
                 <id>28a38e8e-e185-37a7-0000-000000000000</id>
                 <type>PROCESSOR</type>
+                <versionedComponentId>28a38e8e-e185-37a7-8636-4470387fcb26</versionedComponentId>
             </destination>
             <flowFileExpiration>0 sec</flowFileExpiration>
             <labelIndex>1</labelIndex>
@@ -128,6 +140,7 @@
                 <groupId>f63adb24-d705-3b80-0000-000000000000</groupId>
                 <id>e15a2f9b-73f3-3af3-0000-000000000000</id>
                 <type>PROCESSOR</type>
+                <versionedComponentId>e15a2f9b-73f3-3af3-a396-097bca8d0ae3</versionedComponentId>
             </source>
             <zIndex>0</zIndex>
         </connections>
@@ -178,6 +191,7 @@
                 <x>608.0</x>
                 <y>600.5743478677939</y>
             </position>
+            <versionedComponentId>326cfbe5-5145-3753-9b88-18075f5eecfe</versionedComponentId>
             <comments></comments>
             <contents>
                 <connections>
@@ -211,12 +225,14 @@
                 <connections>
                     <id>44c0cc35-e8b5-33b4-0000-000000000000</id>
                     <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
+                    <versionedComponentId>44c0cc35-e8b5-33b4-8221-acfc0d4195cd</versionedComponentId>
                     <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
                     <backPressureObjectThreshold>10000</backPressureObjectThreshold>
                     <destination>
                         <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
                         <id>8456cfe6-7575-3c0b-0000-000000000000</id>
                         <type>PROCESSOR</type>
+                        <versionedComponentId>8456cfe6-7575-3c0b-9205-60ffaa160944</versionedComponentId>
                     </destination>
                     <flowFileExpiration>0 sec</flowFileExpiration>
                     <labelIndex>1</labelIndex>
@@ -230,18 +246,21 @@
                         <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
                         <id>584f256b-c065-307d-0000-000000000000</id>
                         <type>PROCESSOR</type>
+                        <versionedComponentId>584f256b-c065-307d-966a-40eff63eaaab</versionedComponentId>
                     </source>
                     <zIndex>0</zIndex>
                 </connections>
                 <connections>
                     <id>55c9066b-f297-31e2-0000-000000000000</id>
                     <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
+                    <versionedComponentId>55c9066b-f297-31e2-9377-68159399f2a8</versionedComponentId>
                     <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
                     <backPressureObjectThreshold>10000</backPressureObjectThreshold>
                     <destination>
                         <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
                         <id>ede69166-67a2-3c57-0000-000000000000</id>
                         <type>PROCESSOR</type>
+                        <versionedComponentId>ede69166-67a2-3c57-b04d-5f947ce8c43f</versionedComponentId>
                     </destination>
                     <flowFileExpiration>0 sec</flowFileExpiration>
                     <labelIndex>1</labelIndex>
@@ -401,6 +420,7 @@
                 <connections>
                     <id>f01b51e3-10ca-3bd0-0000-000000000000</id>
                     <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
+                    <versionedComponentId>f01b51e3-10ca-3bd0-b49b-6d0e2da189ab</versionedComponentId>
                     <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
                     <backPressureObjectThreshold>10000</backPressureObjectThreshold>
                     <destination>
@@ -421,6 +441,7 @@
                         <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
                         <id>8456cfe6-7575-3c0b-0000-000000000000</id>
                         <type>PROCESSOR</type>
+                        <versionedComponentId>8456cfe6-7575-3c0b-9205-60ffaa160944</versionedComponentId>
                     </source>
                     <zIndex>0</zIndex>
                 </connections>
@@ -1074,6 +1095,7 @@
                         <x>-680.0</x>
                         <y>0.0</y>
                     </position>
+                    <versionedComponentId>584f256b-c065-307d-966a-40eff63eaaab</versionedComponentId>
                     <bundle>
                         <artifact>nifi-standard-nar</artifact>
                         <group>org.apache.nifi</group>
@@ -1268,6 +1290,7 @@
                         <x>-680.0</x>
                         <y>224.0</y>
                     </position>
+                    <versionedComponentId>8456cfe6-7575-3c0b-9205-60ffaa160944</versionedComponentId>
                     <bundle>
                         <artifact>nifi-standard-nar</artifact>
                         <group>org.apache.nifi</group>
@@ -1416,7 +1439,7 @@
                         <name>success</name>
                         <retry>false</retry>
                     </relationships>
-                    <state>STOPPED</state>
+                    <state>RUNNING</state>
                     <style/>
                     <type>org.apache.nifi.processors.standard.ReplaceText</type>
                 </processors>
@@ -1427,6 +1450,7 @@
                         <x>280.0</x>
                         <y>784.0</y>
                     </position>
+                    <versionedComponentId>ede69166-67a2-3c57-b04d-5f947ce8c43f</versionedComponentId>
                     <bundle>
                         <artifact>nifi-standard-nar</artifact>
                         <group>org.apache.nifi</group>
@@ -2102,17 +2126,20 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
                 <x>0.0</x>
                 <y>616.5743478677939</y>
             </position>
+            <versionedComponentId>a000ee85-ac26-3f47-8b9f-73ae14b38f9e</versionedComponentId>
             <comments></comments>
             <contents>
                 <connections>
                     <id>17e6f6d0-d95d-3628-0000-000000000000</id>
                     <parentGroupId>a000ee85-ac26-3f47-0000-000000000000</parentGroupId>
+                    <versionedComponentId>17e6f6d0-d95d-3628-90c2-b81eb3a0d738</versionedComponentId>
                     <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
                     <backPressureObjectThreshold>10000</backPressureObjectThreshold>
                     <destination>
                         <groupId>a000ee85-ac26-3f47-0000-000000000000</groupId>
                         <id>aa5fd947-b2a3-3f4f-0000-000000000000</id>
                         <type>PROCESSOR</type>
+                        <versionedComponentId>aa5fd947-b2a3-3f4f-80e0-fa5bb712e4fd</versionedComponentId>
                     </destination>
                     <flowFileExpiration>0 sec</flowFileExpiration>
                     <labelIndex>1</labelIndex>
@@ -2126,12 +2153,14 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
                         <groupId>a000ee85-ac26-3f47-0000-000000000000</groupId>
                         <id>b8a84dab-ef0a-3907-0000-000000000000</id>
                         <type>PROCESSOR</type>
+                        <versionedComponentId>b8a84dab-ef0a-3907-8a0d-ab69c63fd04c</versionedComponentId>
                     </source>
                     <zIndex>0</zIndex>
                 </connections>
                 <connections>
                     <id>2bec5e73-810b-38a9-0000-000000000000</id>
                     <parentGroupId>a000ee85-ac26-3f47-0000-000000000000</parentGroupId>
+                    <versionedComponentId>2bec5e73-810b-38a9-9837-4f4399e37ed9</versionedComponentId>
                     <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
                     <backPressureObjectThreshold>10000</backPressureObjectThreshold>
                     <destination>
@@ -2158,6 +2187,7 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
                 <connections>
                     <id>61f316be-14a0-3ed0-0000-000000000000</id>
                     <parentGroupId>a000ee85-ac26-3f47-0000-000000000000</parentGroupId>
+                    <versionedComponentId>61f316be-14a0-3ed0-bce2-85f585499004</versionedComponentId>
                     <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
                     <backPressureObjectThreshold>10000</backPressureObjectThreshold>
                     <destination>
@@ -2178,6 +2208,7 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
                         <groupId>a000ee85-ac26-3f47-0000-000000000000</groupId>
                         <id>aa5fd947-b2a3-3f4f-0000-000000000000</id>
                         <type>PROCESSOR</type>
+                        <versionedComponentId>aa5fd947-b2a3-3f4f-80e0-fa5bb712e4fd</versionedComponentId>
                     </source>
                     <zIndex>0</zIndex>
                 </connections>
@@ -2210,14 +2241,43 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
                     <zIndex>0</zIndex>
                 </connections>
                 <connections>
+                    <id>c817c040-f064-3c7f-0000-000000000000</id>
+                    <parentGroupId>a000ee85-ac26-3f47-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>a000ee85-ac26-3f47-0000-000000000000</groupId>
+                        <id>08a172ee-f327-3c87-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                        <versionedComponentId>08a172ee-f327-3c87-9523-156c37af6a33</versionedComponentId>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                    <name></name>
+                    <selectedRelationships>matched</selectedRelationships>
+                    <source>
+                        <groupId>a000ee85-ac26-3f47-0000-000000000000</groupId>
+                        <id>e22cd2d2-c6fa-3760-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                        <versionedComponentId>46b93616-08f9-3c45-a3c7-b967e0e7e71b</versionedComponentId>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
                     <id>eb7653a1-41df-395d-0000-000000000000</id>
                     <parentGroupId>a000ee85-ac26-3f47-0000-000000000000</parentGroupId>
+                    <versionedComponentId>eb7653a1-41df-395d-a5ed-41042393d129</versionedComponentId>
                     <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
                     <backPressureObjectThreshold>10000</backPressureObjectThreshold>
                     <destination>
                         <groupId>a000ee85-ac26-3f47-0000-000000000000</groupId>
                         <id>fea2cf97-200b-3924-0000-000000000000</id>
                         <type>PROCESSOR</type>
+                        <versionedComponentId>fea2cf97-200b-3924-a512-d3ddb4bca8f4</versionedComponentId>
                     </destination>
                     <flowFileExpiration>0 sec</flowFileExpiration>
                     <labelIndex>1</labelIndex>
@@ -2280,9 +2340,10 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
                     <id>08a172ee-f327-3c87-0000-000000000000</id>
                     <parentGroupId>a000ee85-ac26-3f47-0000-000000000000</parentGroupId>
                     <position>
-                        <x>632.0</x>
-                        <y>120.0</y>
+                        <x>672.0</x>
+                        <y>112.0</y>
                     </position>
+                    <versionedComponentId>08a172ee-f327-3c87-9523-156c37af6a33</versionedComponentId>
                     <bundle>
                         <artifact>nifi-standard-nar</artifact>
                         <group>org.apache.nifi</group>
@@ -2488,11 +2549,11 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
                             </entry>
                             <entry>
 <key>From</key>
-<value>marcelinhoalcantaracruz@gmail.com</value>
+<value>${complainantEmail}</value>
                             </entry>
                             <entry>
 <key>To</key>
-<value>${establishmentEmail}</value>
+<value>${complainantEmail}</value>
                             </entry>
                             <entry>
 <key>CC</key>
@@ -2540,14 +2601,7 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
                      &lt;/p&gt;
                      &lt;p style='display: flex; align-items: center; flex-direction: row;'&gt; &lt;span
                            style="font-size:1.5rem"&gt;🎊&lt;/span&gt; Olá, ${name}! 🌟 &lt;/p&gt;
-                     &lt;p&gt; É com imensa alegria que te damos as boas-vindas! 🎉 &lt;/p&gt;
-                     &lt;p&gt; Seu cadastro foi concluído com êxito, e agora, um universo de sabores aguarda por você no
-                        aplicativo Foodway. Estamos empolgados em fazer parte da sua jornada culinária.
-                     &lt;/p&gt;
-                     &lt;p&gt;
-                        Prepare-se para explorar, descobrir e se deliciar com as infinitas possibilidades que só a
-                        Foodway pode oferecer.
-                     &lt;/p&gt;
+                     &lt;p&gt; Foi reportado! 🎉 &lt;/p&gt;
                      &lt;p&gt;
                         Bem-vindo à família Foodway! 🍽️💫
                      &lt;/p&gt;
@@ -2557,7 +2611,7 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
          &lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr align='center'&gt;
-         &lt;td style='padding: 14px'&gt; &lt;img
+         &lt;td style='padding: 14px 0px 0px 0px'&gt; &lt;img
                src='https://foodway-public-s3.s3.amazonaws.com/website-images/foodway-logo.png'
                width='50' alt='Foodway' /&gt;
          &lt;/td&gt;
@@ -2602,11 +2656,11 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
                         <retry>false</retry>
                     </relationships>
                     <relationships>
-                        <autoTerminate>false</autoTerminate>
+                        <autoTerminate>true</autoTerminate>
                         <name>success</name>
                         <retry>false</retry>
                     </relationships>
-                    <state>STOPPED</state>
+                    <state>RUNNING</state>
                     <style/>
                     <type>org.apache.nifi.processors.standard.PutEmail</type>
                 </processors>
@@ -2948,6 +3002,7 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
                         <x>-680.0</x>
                         <y>224.0</y>
                     </position>
+                    <versionedComponentId>aa5fd947-b2a3-3f4f-80e0-fa5bb712e4fd</versionedComponentId>
                     <bundle>
                         <artifact>nifi-standard-nar</artifact>
                         <group>org.apache.nifi</group>
@@ -3274,6 +3329,7 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
                         <x>-680.0</x>
                         <y>0.0</y>
                     </position>
+                    <versionedComponentId>b8a84dab-ef0a-3907-8a0d-ab69c63fd04c</versionedComponentId>
                     <bundle>
                         <artifact>nifi-standard-nar</artifact>
                         <group>org.apache.nifi</group>
@@ -3374,7 +3430,7 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
                         <name>success</name>
                         <retry>false</retry>
                     </relationships>
-                    <state>STOPPED</state>
+                    <state>DISABLED</state>
                     <style/>
                     <type>org.apache.nifi.processors.standard.GenerateFlowFile</type>
                 </processors>
@@ -3558,6 +3614,7 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
                         <x>280.0</x>
                         <y>784.0</y>
                     </position>
+                    <versionedComponentId>fea2cf97-200b-3924-a512-d3ddb4bca8f4</versionedComponentId>
                     <bundle>
                         <artifact>nifi-standard-nar</artifact>
                         <group>org.apache.nifi</group>
@@ -3655,6 +3712,7 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
                 <x>1581.5427547354607</x>
                 <y>264.0</y>
             </position>
+            <versionedComponentId>070a4aeb-eda8-30e4-8f15-29a60b92eab0</versionedComponentId>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
                 <group>org.apache.nifi</group>
@@ -3703,7 +3761,7 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
                     </entry>
                     <entry>
                         <key>HTTP Context Map</key>
-                        <value>b9c7ad3b-282f-3a6a-0000-000000000000</value>
+                        <value>f1ea51b0-0cca-3206-0000-000000000000</value>
                     </entry>
                     <entry>
                         <key>Attributes to add to the HTTP Response (Regex)</key>
@@ -3731,7 +3789,7 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
                 <name>success</name>
                 <retry>false</retry>
             </relationships>
-            <state>STOPPED</state>
+            <state>RUNNING</state>
             <style/>
             <type>org.apache.nifi.processors.standard.HandleHttpResponse</type>
         </processors>
@@ -3742,6 +3800,7 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
                 <x>357.5427547354607</x>
                 <y>272.0</y>
             </position>
+            <versionedComponentId>28a38e8e-e185-37a7-8636-4470387fcb26</versionedComponentId>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
                 <group>org.apache.nifi</group>
@@ -3839,6 +3898,7 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
                 <x>965.5427547354607</x>
                 <y>272.0</y>
             </position>
+            <versionedComponentId>b1cf4860-265e-34bd-be7f-a5962402e457</versionedComponentId>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
                 <group>org.apache.nifi</group>
@@ -3986,7 +4046,7 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
                 <name>success</name>
                 <retry>false</retry>
             </relationships>
-            <state>STOPPED</state>
+            <state>RUNNING</state>
             <style/>
             <type>org.apache.nifi.processors.standard.ReplaceText</type>
         </processors>
@@ -3997,6 +4057,7 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
                 <x>357.5427547354607</x>
                 <y>0.0</y>
             </position>
+            <versionedComponentId>e15a2f9b-73f3-3af3-a396-097bca8d0ae3</versionedComponentId>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
                 <group>org.apache.nifi</group>
@@ -4233,5 +4294,5 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
             <type>org.apache.nifi.processors.standard.HandleHttpRequest</type>
         </processors>
     </snippet>
-    <timestamp>03/17/2024 23:11:48 BRT</timestamp>
+    <timestamp>03/18/2024 22:05:13 BRT</timestamp>
 </template>
