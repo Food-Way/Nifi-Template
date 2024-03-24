@@ -5,6 +5,33 @@
     <name>SMTP_template</name>
     <snippet>
         <connections>
+            <id>07853809-c5f2-352f-0000-000000000000</id>
+            <parentGroupId>f63adb24-d705-3b80-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>0a08bef3-cdfc-3a6b-0000-000000000000</groupId>
+                <id>68f95e7d-519d-3738-0000-000000000000</id>
+                <type>INPUT_PORT</type>
+                <versionedComponentId>73fae31d-7c52-3c42-b2b0-6238916c4e92</versionedComponentId>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+            <name></name>
+            <selectedRelationships>isAccountUpdated</selectedRelationships>
+            <source>
+                <groupId>f63adb24-d705-3b80-0000-000000000000</groupId>
+                <id>28a38e8e-e185-37a7-0000-000000000000</id>
+                <type>PROCESSOR</type>
+                <versionedComponentId>28a38e8e-e185-37a7-8636-4470387fcb26</versionedComponentId>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <connections>
             <id>22faf445-d1ce-3271-0000-000000000000</id>
             <parentGroupId>f63adb24-d705-3b80-0000-000000000000</parentGroupId>
             <versionedComponentId>22faf445-d1ce-3271-98cc-b34565b6a111</versionedComponentId>
@@ -185,54 +212,24 @@
             <type>org.apache.nifi.http.StandardHttpContextMap</type>
         </controllerServices>
         <processGroups>
-            <id>326cfbe5-5145-3753-0000-000000000000</id>
+            <id>0a08bef3-cdfc-3a6b-0000-000000000000</id>
             <parentGroupId>f63adb24-d705-3b80-0000-000000000000</parentGroupId>
             <position>
-                <x>608.0</x>
-                <y>600.5743478677939</y>
+                <x>1000.0</x>
+                <y>536.5743478677939</y>
             </position>
-            <versionedComponentId>326cfbe5-5145-3753-9b88-18075f5eecfe</versionedComponentId>
             <comments></comments>
             <contents>
                 <connections>
-                    <id>41f0450f-3a5e-3e1a-0000-000000000000</id>
-                    <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
-                    <versionedComponentId>33a7165a-5ee8-3e20-bb84-9674de19d08e</versionedComponentId>
+                    <id>186089b2-e8bf-3b62-0000-000000000000</id>
+                    <parentGroupId>0a08bef3-cdfc-3a6b-0000-000000000000</parentGroupId>
                     <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
                     <backPressureObjectThreshold>10000</backPressureObjectThreshold>
                     <destination>
-                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
-                        <id>1c8c0369-fdf6-3dcb-0000-000000000000</id>
+                        <groupId>0a08bef3-cdfc-3a6b-0000-000000000000</groupId>
+                        <id>6022b2ee-054c-3171-0000-000000000000</id>
                         <type>PROCESSOR</type>
-                        <versionedComponentId>46b93616-08f9-3c45-a3c7-b967e0e7e71b</versionedComponentId>
-                    </destination>
-                    <flowFileExpiration>0 sec</flowFileExpiration>
-                    <labelIndex>1</labelIndex>
-                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
-                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
-                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
-                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
-                    <name></name>
-                    <selectedRelationships>unmatched</selectedRelationships>
-                    <source>
-                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
-                        <id>660f03a0-1ef9-3807-0000-000000000000</id>
-                        <type>PROCESSOR</type>
-                        <versionedComponentId>27283bfe-75c5-3210-85ec-8b95b398f791</versionedComponentId>
-                    </source>
-                    <zIndex>0</zIndex>
-                </connections>
-                <connections>
-                    <id>44c0cc35-e8b5-33b4-0000-000000000000</id>
-                    <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
-                    <versionedComponentId>44c0cc35-e8b5-33b4-8221-acfc0d4195cd</versionedComponentId>
-                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
-                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
-                    <destination>
-                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
-                        <id>8456cfe6-7575-3c0b-0000-000000000000</id>
-                        <type>PROCESSOR</type>
-                        <versionedComponentId>8456cfe6-7575-3c0b-9205-60ffaa160944</versionedComponentId>
+                        <versionedComponentId>01925796-ae20-30c5-8c84-3dce5993816e</versionedComponentId>
                     </destination>
                     <flowFileExpiration>0 sec</flowFileExpiration>
                     <labelIndex>1</labelIndex>
@@ -243,22 +240,49 @@
                     <name></name>
                     <selectedRelationships>success</selectedRelationships>
                     <source>
-                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
-                        <id>584f256b-c065-307d-0000-000000000000</id>
+                        <groupId>0a08bef3-cdfc-3a6b-0000-000000000000</groupId>
+                        <id>ddecc8fc-dc91-3ac6-0000-000000000000</id>
                         <type>PROCESSOR</type>
-                        <versionedComponentId>584f256b-c065-307d-966a-40eff63eaaab</versionedComponentId>
                     </source>
                     <zIndex>0</zIndex>
                 </connections>
                 <connections>
-                    <id>55c9066b-f297-31e2-0000-000000000000</id>
-                    <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
+                    <id>4c7d5edf-48d8-31e4-0000-000000000000</id>
+                    <parentGroupId>0a08bef3-cdfc-3a6b-0000-000000000000</parentGroupId>
+                    <versionedComponentId>e9fd2ec1-2617-359a-bf14-452fb741c2e9</versionedComponentId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>0a08bef3-cdfc-3a6b-0000-000000000000</groupId>
+                        <id>15ce1aaa-2814-3d99-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                        <versionedComponentId>878a8a25-db57-3737-a599-9a3e642b4da4</versionedComponentId>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                    <name></name>
+                    <selectedRelationships>success</selectedRelationships>
+                    <source>
+                        <groupId>0a08bef3-cdfc-3a6b-0000-000000000000</groupId>
+                        <id>6022b2ee-054c-3171-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                        <versionedComponentId>01925796-ae20-30c5-8c84-3dce5993816e</versionedComponentId>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>53c057c8-a57d-3db5-0000-000000000000</id>
+                    <parentGroupId>0a08bef3-cdfc-3a6b-0000-000000000000</parentGroupId>
                     <versionedComponentId>55c9066b-f297-31e2-9377-68159399f2a8</versionedComponentId>
                     <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
                     <backPressureObjectThreshold>10000</backPressureObjectThreshold>
                     <destination>
-                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
-                        <id>ede69166-67a2-3c57-0000-000000000000</id>
+                        <groupId>0a08bef3-cdfc-3a6b-0000-000000000000</groupId>
+                        <id>905a3d59-9cf0-3c15-0000-000000000000</id>
                         <type>PROCESSOR</type>
                         <versionedComponentId>ede69166-67a2-3c57-b04d-5f947ce8c43f</versionedComponentId>
                     </destination>
@@ -271,24 +295,23 @@
                     <name></name>
                     <selectedRelationships>success</selectedRelationships>
                     <source>
-                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
-                        <id>f84251c3-7ecc-3581-0000-000000000000</id>
+                        <groupId>0a08bef3-cdfc-3a6b-0000-000000000000</groupId>
+                        <id>15ce1aaa-2814-3d99-0000-000000000000</id>
                         <type>PROCESSOR</type>
                         <versionedComponentId>878a8a25-db57-3737-a599-9a3e642b4da4</versionedComponentId>
                     </source>
                     <zIndex>0</zIndex>
                 </connections>
                 <connections>
-                    <id>68eb8ac9-7d52-33c0-0000-000000000000</id>
-                    <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
-                    <versionedComponentId>18300434-b1bc-3d2f-b3d3-40f5d909040c</versionedComponentId>
+                    <id>6f2452dc-5be2-3b0d-0000-000000000000</id>
+                    <parentGroupId>0a08bef3-cdfc-3a6b-0000-000000000000</parentGroupId>
                     <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
                     <backPressureObjectThreshold>10000</backPressureObjectThreshold>
                     <destination>
-                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
-                        <id>00d7cad5-266b-31d9-0000-000000000000</id>
+                        <groupId>0a08bef3-cdfc-3a6b-0000-000000000000</groupId>
+                        <id>6022b2ee-054c-3171-0000-000000000000</id>
                         <type>PROCESSOR</type>
-                        <versionedComponentId>80fa039b-ae7b-3446-8158-7ae3b009550d</versionedComponentId>
+                        <versionedComponentId>01925796-ae20-30c5-8c84-3dce5993816e</versionedComponentId>
                     </destination>
                     <flowFileExpiration>0 sec</flowFileExpiration>
                     <labelIndex>1</labelIndex>
@@ -299,52 +322,21 @@
                     <name></name>
                     <selectedRelationships>success</selectedRelationships>
                     <source>
-                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
-                        <id>f54143c0-01dc-3c5b-0000-000000000000</id>
+                        <groupId>0a08bef3-cdfc-3a6b-0000-000000000000</groupId>
+                        <id>2dd86b2d-9d4b-340b-0000-000000000000</id>
                         <type>PROCESSOR</type>
-                        <versionedComponentId>9df86032-557d-380d-b271-6bbea8b52517</versionedComponentId>
                     </source>
                     <zIndex>0</zIndex>
                 </connections>
                 <connections>
-                    <id>846e4aa9-054e-319f-0000-000000000000</id>
-                    <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
-                    <versionedComponentId>e9fd2ec1-2617-359a-bf14-452fb741c2e9</versionedComponentId>
+                    <id>721fade5-c74c-37ef-0000-000000000000</id>
+                    <parentGroupId>0a08bef3-cdfc-3a6b-0000-000000000000</parentGroupId>
                     <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
                     <backPressureObjectThreshold>10000</backPressureObjectThreshold>
                     <destination>
-                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
-                        <id>f84251c3-7ecc-3581-0000-000000000000</id>
+                        <groupId>0a08bef3-cdfc-3a6b-0000-000000000000</groupId>
+                        <id>59dcea41-aa1b-3809-0000-000000000000</id>
                         <type>PROCESSOR</type>
-                        <versionedComponentId>878a8a25-db57-3737-a599-9a3e642b4da4</versionedComponentId>
-                    </destination>
-                    <flowFileExpiration>0 sec</flowFileExpiration>
-                    <labelIndex>1</labelIndex>
-                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
-                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
-                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
-                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
-                    <name></name>
-                    <selectedRelationships>success</selectedRelationships>
-                    <source>
-                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
-                        <id>013f4ec8-6d15-3371-0000-000000000000</id>
-                        <type>PROCESSOR</type>
-                        <versionedComponentId>01925796-ae20-30c5-8c84-3dce5993816e</versionedComponentId>
-                    </source>
-                    <zIndex>0</zIndex>
-                </connections>
-                <connections>
-                    <id>9cab1b32-0501-383a-0000-000000000000</id>
-                    <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
-                    <versionedComponentId>6192592c-e2a9-30ed-8bac-528980cd6600</versionedComponentId>
-                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
-                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
-                    <destination>
-                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
-                        <id>013f4ec8-6d15-3371-0000-000000000000</id>
-                        <type>PROCESSOR</type>
-                        <versionedComponentId>01925796-ae20-30c5-8c84-3dce5993816e</versionedComponentId>
                     </destination>
                     <flowFileExpiration>0 sec</flowFileExpiration>
                     <labelIndex>1</labelIndex>
@@ -355,24 +347,104 @@
                     <name></name>
                     <selectedRelationships>matched</selectedRelationships>
                     <source>
-                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
-                        <id>1c8c0369-fdf6-3dcb-0000-000000000000</id>
+                        <groupId>0a08bef3-cdfc-3a6b-0000-000000000000</groupId>
+                        <id>01c715f6-30e7-3c1a-0000-000000000000</id>
                         <type>PROCESSOR</type>
                         <versionedComponentId>46b93616-08f9-3c45-a3c7-b967e0e7e71b</versionedComponentId>
                     </source>
                     <zIndex>0</zIndex>
                 </connections>
                 <connections>
-                    <id>b74516f3-e315-385d-0000-000000000000</id>
-                    <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
-                    <versionedComponentId>d6d3ddc9-a1cd-3836-9487-f7e59d563120</versionedComponentId>
+                    <id>724694ee-f113-3c1c-0000-000000000000</id>
+                    <parentGroupId>0a08bef3-cdfc-3a6b-0000-000000000000</parentGroupId>
+                    <versionedComponentId>44c0cc35-e8b5-33b4-8221-acfc0d4195cd</versionedComponentId>
                     <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
                     <backPressureObjectThreshold>10000</backPressureObjectThreshold>
                     <destination>
-                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
-                        <id>660f03a0-1ef9-3807-0000-000000000000</id>
+                        <groupId>0a08bef3-cdfc-3a6b-0000-000000000000</groupId>
+                        <id>ee44e9c3-a2b7-3dbb-0000-000000000000</id>
                         <type>PROCESSOR</type>
-                        <versionedComponentId>27283bfe-75c5-3210-85ec-8b95b398f791</versionedComponentId>
+                        <versionedComponentId>8456cfe6-7575-3c0b-9205-60ffaa160944</versionedComponentId>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                    <name></name>
+                    <selectedRelationships>success</selectedRelationships>
+                    <source>
+                        <groupId>0a08bef3-cdfc-3a6b-0000-000000000000</groupId>
+                        <id>1707eed6-7ed0-33af-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                        <versionedComponentId>584f256b-c065-307d-966a-40eff63eaaab</versionedComponentId>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>8c22bde0-c12b-3ed6-0000-000000000000</id>
+                    <parentGroupId>0a08bef3-cdfc-3a6b-0000-000000000000</parentGroupId>
+                    <versionedComponentId>f01b51e3-10ca-3bd0-b49b-6d0e2da189ab</versionedComponentId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>0a08bef3-cdfc-3a6b-0000-000000000000</groupId>
+                        <id>01c715f6-30e7-3c1a-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                        <versionedComponentId>46b93616-08f9-3c45-a3c7-b967e0e7e71b</versionedComponentId>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                    <name></name>
+                    <selectedRelationships>success</selectedRelationships>
+                    <source>
+                        <groupId>0a08bef3-cdfc-3a6b-0000-000000000000</groupId>
+                        <id>ee44e9c3-a2b7-3dbb-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                        <versionedComponentId>8456cfe6-7575-3c0b-9205-60ffaa160944</versionedComponentId>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>907645d0-b4a1-3615-0000-000000000000</id>
+                    <parentGroupId>0a08bef3-cdfc-3a6b-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>0a08bef3-cdfc-3a6b-0000-000000000000</groupId>
+                        <id>2dd86b2d-9d4b-340b-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                    <name></name>
+                    <selectedRelationships>isCustomer</selectedRelationships>
+                    <source>
+                        <groupId>0a08bef3-cdfc-3a6b-0000-000000000000</groupId>
+                        <id>59dcea41-aa1b-3809-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>980bfd72-08fa-32f6-0000-000000000000</id>
+                    <parentGroupId>0a08bef3-cdfc-3a6b-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>0a08bef3-cdfc-3a6b-0000-000000000000</groupId>
+                        <id>01c715f6-30e7-3c1a-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                        <versionedComponentId>46b93616-08f9-3c45-a3c7-b967e0e7e71b</versionedComponentId>
                     </destination>
                     <flowFileExpiration>0 sec</flowFileExpiration>
                     <labelIndex>1</labelIndex>
@@ -382,24 +454,22 @@
                     <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
                     <name></name>
                     <source>
-                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
-                        <id>d9b954ea-c596-32f8-0000-000000000000</id>
+                        <groupId>0a08bef3-cdfc-3a6b-0000-000000000000</groupId>
+                        <id>68f95e7d-519d-3738-0000-000000000000</id>
                         <type>INPUT_PORT</type>
                         <versionedComponentId>73fae31d-7c52-3c42-b2b0-6238916c4e92</versionedComponentId>
                     </source>
                     <zIndex>0</zIndex>
                 </connections>
                 <connections>
-                    <id>ddfa20de-4160-34cd-0000-000000000000</id>
-                    <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
-                    <versionedComponentId>a1eb5bae-041d-3bd4-a70b-c78da75ba0b4</versionedComponentId>
+                    <id>d491e8c1-6ab4-35fd-0000-000000000000</id>
+                    <parentGroupId>0a08bef3-cdfc-3a6b-0000-000000000000</parentGroupId>
                     <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
                     <backPressureObjectThreshold>10000</backPressureObjectThreshold>
                     <destination>
-                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
-                        <id>f54143c0-01dc-3c5b-0000-000000000000</id>
+                        <groupId>0a08bef3-cdfc-3a6b-0000-000000000000</groupId>
+                        <id>ddecc8fc-dc91-3ac6-0000-000000000000</id>
                         <type>PROCESSOR</type>
-                        <versionedComponentId>9df86032-557d-380d-b271-6bbea8b52517</versionedComponentId>
                     </destination>
                     <flowFileExpiration>0 sec</flowFileExpiration>
                     <labelIndex>1</labelIndex>
@@ -408,49 +478,20 @@
                     <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
                     <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
                     <name></name>
-                    <selectedRelationships>matched</selectedRelationships>
+                    <selectedRelationships>isEstablishment</selectedRelationships>
                     <source>
-                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
-                        <id>f17727e9-6dde-35e9-0000-000000000000</id>
+                        <groupId>0a08bef3-cdfc-3a6b-0000-000000000000</groupId>
+                        <id>59dcea41-aa1b-3809-0000-000000000000</id>
                         <type>PROCESSOR</type>
-                        <versionedComponentId>a61fa7ad-3b08-39a6-96df-e19a4011843d</versionedComponentId>
-                    </source>
-                    <zIndex>0</zIndex>
-                </connections>
-                <connections>
-                    <id>f01b51e3-10ca-3bd0-0000-000000000000</id>
-                    <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
-                    <versionedComponentId>f01b51e3-10ca-3bd0-b49b-6d0e2da189ab</versionedComponentId>
-                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
-                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
-                    <destination>
-                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
-                        <id>1c8c0369-fdf6-3dcb-0000-000000000000</id>
-                        <type>PROCESSOR</type>
-                        <versionedComponentId>46b93616-08f9-3c45-a3c7-b967e0e7e71b</versionedComponentId>
-                    </destination>
-                    <flowFileExpiration>0 sec</flowFileExpiration>
-                    <labelIndex>1</labelIndex>
-                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
-                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
-                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
-                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
-                    <name></name>
-                    <selectedRelationships>success</selectedRelationships>
-                    <source>
-                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
-                        <id>8456cfe6-7575-3c0b-0000-000000000000</id>
-                        <type>PROCESSOR</type>
-                        <versionedComponentId>8456cfe6-7575-3c0b-9205-60ffaa160944</versionedComponentId>
                     </source>
                     <zIndex>0</zIndex>
                 </connections>
                 <inputPorts>
-                    <id>d9b954ea-c596-32f8-0000-000000000000</id>
-                    <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
+                    <id>68f95e7d-519d-3738-0000-000000000000</id>
+                    <parentGroupId>0a08bef3-cdfc-3a6b-0000-000000000000</parentGroupId>
                     <position>
-                        <x>360.0</x>
-                        <y>-248.0</y>
+                        <x>88.0</x>
+                        <y>0.0</y>
                     </position>
                     <versionedComponentId>73fae31d-7c52-3c42-b2b0-6238916c4e92</versionedComponentId>
                     <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
@@ -459,13 +500,196 @@
                     <type>INPUT_PORT</type>
                 </inputPorts>
                 <processors>
-                    <id>00d7cad5-266b-31d9-0000-000000000000</id>
-                    <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
+                    <id>01c715f6-30e7-3c1a-0000-000000000000</id>
+                    <parentGroupId>0a08bef3-cdfc-3a6b-0000-000000000000</parentGroupId>
                     <position>
-                        <x>632.0</x>
-                        <y>536.0</y>
+                        <x>32.0</x>
+                        <y>112.0</y>
                     </position>
-                    <versionedComponentId>80fa039b-ae7b-3446-8158-7ae3b009550d</versionedComponentId>
+                    <versionedComponentId>46b93616-08f9-3c45-a3c7-b967e0e7e71b</versionedComponentId>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.25.0</version>
+                    </bundle>
+                    <config>
+                        <backoffMechanism>PENALIZE_FLOWFILE</backoffMechanism>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Destination</key>
+<value>
+    <name>Destination</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Return Type</key>
+<value>
+    <name>Return Type</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Path Not Found Behavior</key>
+<value>
+    <name>Path Not Found Behavior</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Null Value Representation</key>
+<value>
+    <name>Null Value Representation</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Max String Length</key>
+<value>
+    <name>Max String Length</name>
+</value>
+                            </entry>
+                            <entry>
+<key>description</key>
+<value>
+    <name>description</name>
+</value>
+                            </entry>
+                            <entry>
+<key>email</key>
+<value>
+    <name>email</name>
+</value>
+                            </entry>
+                            <entry>
+<key>establishmentName</key>
+<value>
+    <name>establishmentName</name>
+</value>
+                            </entry>
+                            <entry>
+<key>name</key>
+<value>
+    <name>name</name>
+</value>
+                            </entry>
+                            <entry>
+<key>phone</key>
+<value>
+    <name>phone</name>
+</value>
+                            </entry>
+                            <entry>
+<key>profileHeader</key>
+<value>
+    <name>profileHeader</name>
+</value>
+                            </entry>
+                            <entry>
+<key>profilePhoto</key>
+<value>
+    <name>profilePhoto</name>
+</value>
+                            </entry>
+                            <entry>
+<key>typeUser</key>
+<value>
+    <name>typeUser</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <maxBackoffPeriod>10 mins</maxBackoffPeriod>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Destination</key>
+<value>flowfile-attribute</value>
+                            </entry>
+                            <entry>
+<key>Return Type</key>
+<value>auto-detect</value>
+                            </entry>
+                            <entry>
+<key>Path Not Found Behavior</key>
+<value>ignore</value>
+                            </entry>
+                            <entry>
+<key>Null Value Representation</key>
+<value>empty string</value>
+                            </entry>
+                            <entry>
+<key>Max String Length</key>
+<value>20 MB</value>
+                            </entry>
+                            <entry>
+<key>description</key>
+<value>$.description</value>
+                            </entry>
+                            <entry>
+<key>email</key>
+<value>$.email</value>
+                            </entry>
+                            <entry>
+<key>establishmentName</key>
+<value>$.establishmentName</value>
+                            </entry>
+                            <entry>
+<key>name</key>
+<value>$.name</value>
+                            </entry>
+                            <entry>
+<key>phone</key>
+<value>$.phone</value>
+                            </entry>
+                            <entry>
+<key>profileHeader</key>
+<value>$.profileHeader</value>
+                            </entry>
+                            <entry>
+<key>profilePhoto</key>
+<value>$.profilePhoto</value>
+                            </entry>
+                            <entry>
+<key>typeUser</key>
+<value>$.typeUser</value>
+                            </entry>
+                        </properties>
+                        <retryCount>10</retryCount>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <executionNodeRestricted>false</executionNodeRestricted>
+                    <name>extrai dados conta atualizada</name>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>failure</name>
+                        <retry>false</retry>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>matched</name>
+                        <retry>false</retry>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>unmatched</name>
+                        <retry>false</retry>
+                    </relationships>
+                    <state>RUNNING</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.EvaluateJsonPath</type>
+                </processors>
+                <processors>
+                    <id>15ce1aaa-2814-3d99-0000-000000000000</id>
+                    <parentGroupId>0a08bef3-cdfc-3a6b-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>56.0</x>
+                        <y>1000.0</y>
+                    </position>
+                    <versionedComponentId>878a8a25-db57-3737-a599-9a3e642b4da4</versionedComponentId>
                     <bundle>
                         <artifact>nifi-standard-nar</artifact>
                         <group>org.apache.nifi</group>
@@ -569,8 +793,8 @@
                             <entry>
 <key>Replacement Value</key>
 <value>{
-	"nome": "${nome}",
-	"sobrenome": "${sobrenome}",
+	"name": "${name}",
+	"establishmentName": "${establishmentName}",
 	"email": "${email}",
 	"status": "Conta Criada."
 }</value>
@@ -616,16 +840,420 @@
                         <name>success</name>
                         <retry>false</retry>
                     </relationships>
-                    <state>STOPPED</state>
+                    <state>RUNNING</state>
                     <style/>
                     <type>org.apache.nifi.processors.standard.ReplaceText</type>
                 </processors>
                 <processors>
-                    <id>013f4ec8-6d15-3371-0000-000000000000</id>
-                    <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
+                    <id>1707eed6-7ed0-33af-0000-000000000000</id>
+                    <parentGroupId>0a08bef3-cdfc-3a6b-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>-680.0</x>
+                        <y>-112.0</y>
+                    </position>
+                    <versionedComponentId>584f256b-c065-307d-966a-40eff63eaaab</versionedComponentId>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.25.0</version>
+                    </bundle>
+                    <config>
+                        <backoffMechanism>PENALIZE_FLOWFILE</backoffMechanism>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>File Size</key>
+<value>
+    <name>File Size</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Batch Size</key>
+<value>
+    <name>Batch Size</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Data Format</key>
+<value>
+    <name>Data Format</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Unique FlowFiles</key>
+<value>
+    <name>Unique FlowFiles</name>
+</value>
+                            </entry>
+                            <entry>
+<key>generate-ff-custom-text</key>
+<value>
+    <name>generate-ff-custom-text</name>
+</value>
+                            </entry>
+                            <entry>
+<key>character-set</key>
+<value>
+    <name>character-set</name>
+</value>
+                            </entry>
+                            <entry>
+<key>mime-type</key>
+<value>
+    <name>mime-type</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <maxBackoffPeriod>10 mins</maxBackoffPeriod>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>File Size</key>
+<value>0B</value>
+                            </entry>
+                            <entry>
+<key>Batch Size</key>
+<value>1</value>
+                            </entry>
+                            <entry>
+<key>Data Format</key>
+<value>Text</value>
+                            </entry>
+                            <entry>
+<key>Unique FlowFiles</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>generate-ff-custom-text</key>
+                            </entry>
+                            <entry>
+<key>character-set</key>
+<value>UTF-8</value>
+                            </entry>
+                            <entry>
+<key>mime-type</key>
+<value>application/json</value>
+                            </entry>
+                        </properties>
+                        <retryCount>10</retryCount>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>1 min</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <executionNodeRestricted>false</executionNodeRestricted>
+                    <name>GenerateFlowFile</name>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                        <retry>false</retry>
+                    </relationships>
+                    <state>DISABLED</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.GenerateFlowFile</type>
+                </processors>
+                <processors>
+                    <id>2dd86b2d-9d4b-340b-0000-000000000000</id>
+                    <parentGroupId>0a08bef3-cdfc-3a6b-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>328.0</x>
+                        <y>520.0</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.25.0</version>
+                    </bundle>
+                    <config>
+                        <backoffMechanism>PENALIZE_FLOWFILE</backoffMechanism>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Replacement Strategy</key>
+<value>
+    <name>Replacement Strategy</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Regular Expression</key>
+<value>
+    <dependencies>
+        <dependentValues>Regex Replace</dependentValues>
+        <dependentValues>Literal Replace</dependentValues>
+        <propertyName>Replacement Strategy</propertyName>
+    </dependencies>
+    <name>Regular Expression</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Replacement Value</key>
+<value>
+    <dependencies>
+        <dependentValues>Prepend</dependentValues>
+        <dependentValues>Regex Replace</dependentValues>
+        <dependentValues>Always Replace</dependentValues>
+        <dependentValues>Append</dependentValues>
+        <dependentValues>Literal Replace</dependentValues>
+        <propertyName>Replacement Strategy</propertyName>
+    </dependencies>
+    <name>Replacement Value</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Text to Prepend</key>
+<value>
+    <dependencies>
+        <dependentValues>Surround</dependentValues>
+        <propertyName>Replacement Strategy</propertyName>
+    </dependencies>
+    <name>Text to Prepend</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Text to Append</key>
+<value>
+    <dependencies>
+        <dependentValues>Surround</dependentValues>
+        <propertyName>Replacement Strategy</propertyName>
+    </dependencies>
+    <name>Text to Append</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Character Set</key>
+<value>
+    <name>Character Set</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Maximum Buffer Size</key>
+<value>
+    <name>Maximum Buffer Size</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Evaluation Mode</key>
+<value>
+    <name>Evaluation Mode</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Line-by-Line Evaluation Mode</key>
+<value>
+    <name>Line-by-Line Evaluation Mode</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <maxBackoffPeriod>10 mins</maxBackoffPeriod>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Replacement Strategy</key>
+<value>Always Replace</value>
+                            </entry>
+                            <entry>
+<key>Regular Expression</key>
+<value>(?s)(^.*$)</value>
+                            </entry>
+                            <entry>
+<key>Replacement Value</key>
+<value>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+   &lt;meta http-equiv='Content-Type' content='text/html; charset=utf-8' /&gt;
+   &lt;meta http-equiv='X-UA-Compatible' content='IE=edge' /&gt;
+   &lt;meta name='viewport' content='width=device-width' /&gt;
+   &lt;title&gt;Atualização de Dados&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body style='background-color: #eaeaef; font-family: quicksand, sans-serif; color: #575757; font-size: 16px;'&gt;
+   &lt;table width='600' align='center' cellpadding='0' cellspacing='0'&gt;
+      &lt;tr align='center'&gt;
+         &lt;td style='padding: 14px'&gt;
+            &lt;img src='https://foodway-public-s3.s3.amazonaws.com/website-images/foodway-logo.png' width='50' alt='Foodway' /&gt;
+         &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr align='center'&gt;
+         &lt;td cellspacing='0'&gt;
+            &lt;table width='600' style='background-color: #ED0000; padding: 8px; border-radius: 16px 16px 0 0;'&gt;
+               &lt;tr&gt;
+                  &lt;td&gt; &lt;/td&gt;
+               &lt;/tr&gt;
+            &lt;/table&gt;
+            &lt;table width='600' style='background-color: #ffffff; padding: 16px; border-radius: 0 0 16px 16px;'&gt;
+               &lt;tr&gt;
+                  &lt;td&gt;
+                     &lt;p style='font-weight: bold'&gt;Atualização de Dados&lt;/p&gt;
+                     &lt;p&gt;Olá, ${name}&lt;/p&gt;
+                     &lt;p&gt;Gostaríamos de informar que os dados da sua conta foram atualizados com sucesso! Abaixo estão os detalhes atualizados:&lt;/p&gt;
+                     &lt;ul&gt;
+                        &lt;li&gt;&lt;strong&gt;Nome:&lt;/strong&gt; ${name}&lt;/li&gt;
+                        &lt;li&gt;&lt;strong&gt;E-mail:&lt;/strong&gt; ${email}&lt;/li&gt;
+                        &lt;li&gt;&lt;strong&gt;Foto do Perfil:&lt;/strong&gt; ${profilePhoto:isEmpty():ifElse('N/A')}&lt;/li&gt;
+                        &lt;li&gt;&lt;strong&gt;Imagem de Capa do Perfil:&lt;/strong&gt; ${profileHeader:isEmpty():ifElse('N/A')}&lt;/li&gt;
+                     &lt;/ul&gt;
+                     &lt;p&gt;Se precisar fazer mais alguma alteração ou tiver alguma dúvida, não hesite em entrar em contato conosco.&lt;/p&gt;
+                     &lt;p&gt;Foodway. O caminho para a escolha perfeita! 🍽️💫&lt;/p&gt;
+                  &lt;/td&gt;
+               &lt;/tr&gt;
+            &lt;/table&gt;
+         &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr align='center'&gt;
+         &lt;td style='padding: 14px 0px 0px 0px'&gt; &lt;img src='https://foodway-public-s3.s3.amazonaws.com/website-images/foodway-logo.png' width='50' alt='Foodway' /&gt;
+         &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr align='center'&gt;
+         &lt;td&gt;
+            &lt;p&gt; Foodway&lt;br&gt; Rua Haddock Lobo, 595 - Cerqueira César, São Paulo - SP, 01414-001&lt;/p&gt;
+         &lt;/td&gt;
+      &lt;/tr&gt;
+   &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</value>
+                            </entry>
+                            <entry>
+<key>Text to Prepend</key>
+                            </entry>
+                            <entry>
+<key>Text to Append</key>
+                            </entry>
+                            <entry>
+<key>Character Set</key>
+<value>UTF-8</value>
+                            </entry>
+                            <entry>
+<key>Maximum Buffer Size</key>
+<value>1 MB</value>
+                            </entry>
+                            <entry>
+<key>Evaluation Mode</key>
+<value>Entire text</value>
+                            </entry>
+                            <entry>
+<key>Line-by-Line Evaluation Mode</key>
+<value>All</value>
+                            </entry>
+                        </properties>
+                        <retryCount>10</retryCount>
+                        <runDurationMillis>25</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <executionNodeRestricted>false</executionNodeRestricted>
+                    <name>email customer</name>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>failure</name>
+                        <retry>false</retry>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                        <retry>false</retry>
+                    </relationships>
+                    <state>RUNNING</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.ReplaceText</type>
+                </processors>
+                <processors>
+                    <id>59dcea41-aa1b-3809-0000-000000000000</id>
+                    <parentGroupId>0a08bef3-cdfc-3a6b-0000-000000000000</parentGroupId>
                     <position>
                         <x>32.0</x>
-                        <y>320.0</y>
+                        <y>312.0</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.25.0</version>
+                    </bundle>
+                    <config>
+                        <backoffMechanism>PENALIZE_FLOWFILE</backoffMechanism>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Routing Strategy</key>
+<value>
+    <name>Routing Strategy</name>
+</value>
+                            </entry>
+                            <entry>
+<key>isCustomer</key>
+<value>
+    <name>isCustomer</name>
+</value>
+                            </entry>
+                            <entry>
+<key>isEstablishment</key>
+<value>
+    <name>isEstablishment</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <maxBackoffPeriod>10 mins</maxBackoffPeriod>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Routing Strategy</key>
+<value>Route to Property name</value>
+                            </entry>
+                            <entry>
+<key>isCustomer</key>
+<value>${typeUser:equals('CLIENT')}</value>
+                            </entry>
+                            <entry>
+<key>isEstablishment</key>
+<value>${typeUser:equals('ESTABLISHMENT')}</value>
+                            </entry>
+                        </properties>
+                        <retryCount>10</retryCount>
+                        <runDurationMillis>25</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <executionNodeRestricted>false</executionNodeRestricted>
+                    <name>verifica se é estab ou customer</name>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>isCustomer</name>
+                        <retry>false</retry>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>isEstablishment</name>
+                        <retry>false</retry>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>unmatched</name>
+                        <retry>false</retry>
+                    </relationships>
+                    <state>RUNNING</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.RouteOnAttribute</type>
+                </processors>
+                <processors>
+                    <id>6022b2ee-054c-3171-0000-000000000000</id>
+                    <parentGroupId>0a08bef3-cdfc-3a6b-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>56.0</x>
+                        <y>784.0</y>
                     </position>
                     <versionedComponentId>01925796-ae20-30c5-8c84-3dce5993816e</versionedComponentId>
                     <bundle>
@@ -803,7 +1431,7 @@
                             </entry>
                             <entry>
 <key>SMTP Username</key>
-<value>marcelinhoalcantaracruz@gmail.com</value>
+<value>#{smtp.user}</value>
                             </entry>
                             <entry>
 <key>SMTP Password</key>
@@ -833,7 +1461,7 @@
                             </entry>
                             <entry>
 <key>From</key>
-<value>m4yn3x@gmail.com</value>
+<value>#{smtp.user}</value>
                             </entry>
                             <entry>
 <key>To</key>
@@ -847,78 +1475,14 @@
                             </entry>
                             <entry>
 <key>Subject</key>
-<value>Sua conta FoodWay foi criada</value>
+<value>Atualização de Dados</value>
                             </entry>
                             <entry>
 <key>Message</key>
-<value>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-
-&lt;head&gt;
-   &lt;meta http-equiv='Content-Type' content='text/html; charset=utf-8' /&gt;
-   &lt;meta http-equiv='X-UA-Compatible' content='IE=edge' /&gt;
-   &lt;meta name='viewport' content='width=device-width' /&gt;
-   &lt;title&gt;Bem-vindo!&lt;/title&gt;
-&lt;/head&gt;
-
-&lt;body style='background-color: #eaeaef; font-family: quicksand, sans-serif; color: #575757; font-size:
-   16px;'&gt;
-   &lt;table width='600' align='center' cellpadding='0' cellspacing='0'&gt;
-      &lt;tr align='center'&gt;
-         &lt;td style='padding: 14px'&gt; 
-            &lt;img
-               src='https://foodway-public-s3.s3.amazonaws.com/website-images/foodway-logo.png'
-               width='50' alt='Foodway' /&gt;
-         &lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr align='center'&gt;
-         &lt;td cellspacing='0'&gt;
-            &lt;table width='600' style='background-color: #ED0000; padding: 8px; border-radius: 16px 16px 0 0;'&gt;
-               &lt;tr&gt;
-                  &lt;td&gt; &lt;/td&gt;
-               &lt;/tr&gt;
-            &lt;/table&gt;
-            &lt;table width='600' style='background-color: #ffffff; padding: 16px; border-radius: 0 0 16px 16px;'&gt;
-               &lt;tr&gt;
-                  &lt;td&gt;
-                     &lt;p style='font-weight: bold'&gt; Seja Bem-Vindo à Foodway! 🥳✨
-                     &lt;/p&gt;
-                     &lt;p style='display: flex; align-items: center; flex-direction: row;'&gt; &lt;span
-                           style="font-size:1.5rem"&gt;🎊&lt;/span&gt; Olá, ${name}! 🌟 &lt;/p&gt;
-                     &lt;p&gt; É com imensa alegria que te damos as boas-vindas! 🎉 &lt;/p&gt;
-                     &lt;p&gt; Seu cadastro foi concluído com êxito, e agora, um universo de sabores aguarda por você no
-                        aplicativo Foodway. Estamos empolgados em fazer parte da sua jornada culinária.
-                     &lt;/p&gt;
-                     &lt;p&gt;
-                        Prepare-se para explorar, descobrir e se deliciar com as infinitas possibilidades que só a
-                        Foodway pode oferecer.
-                     &lt;/p&gt;
-                     &lt;p&gt;
-                        Bem-vindo à família Foodway! 🍽️💫
-                     &lt;/p&gt;
-                  &lt;/td&gt;
-               &lt;/tr&gt;
-            &lt;/table&gt;
-         &lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr align='center'&gt;
-         &lt;td style='padding: 14px 0px 0px 0px'&gt; &lt;img
-               src='https://foodway-public-s3.s3.amazonaws.com/website-images/foodway-logo.png'
-               width='50' alt='Foodway' /&gt;
-         &lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr align='center'&gt;
-         &lt;td&gt;
-            &lt;p&gt; Foodway&lt;br&gt; Rua Haddock Lobo, 595 - Cerqueira César, São Paulo - SP, 01414-001&lt;/p&gt;
-         &lt;/td&gt;
-      &lt;/tr&gt;
-   &lt;/table&gt;
-&lt;/body&gt;
-&lt;/html&gt;</value>
                             </entry>
                             <entry>
 <key>email-ff-content-as-message</key>
-<value>false</value>
+<value>true</value>
                             </entry>
                             <entry>
 <key>input-character-set</key>
@@ -956,13 +1520,13 @@
                     <type>org.apache.nifi.processors.standard.PutEmail</type>
                 </processors>
                 <processors>
-                    <id>1c8c0369-fdf6-3dcb-0000-000000000000</id>
-                    <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
+                    <id>905a3d59-9cf0-3c15-0000-000000000000</id>
+                    <parentGroupId>0a08bef3-cdfc-3a6b-0000-000000000000</parentGroupId>
                     <position>
-                        <x>32.0</x>
-                        <y>112.0</y>
+                        <x>56.0</x>
+                        <y>1200.0</y>
                     </position>
-                    <versionedComponentId>46b93616-08f9-3c45-a3c7-b967e0e7e71b</versionedComponentId>
+                    <versionedComponentId>ede69166-67a2-3c57-b04d-5f947ce8c43f</versionedComponentId>
                     <bundle>
                         <artifact>nifi-standard-nar</artifact>
                         <group>org.apache.nifi</group>
@@ -975,51 +1539,28 @@
                         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                         <descriptors>
                             <entry>
-<key>Destination</key>
+<key>HTTP Status Code</key>
 <value>
-    <name>Destination</name>
+    <name>HTTP Status Code</name>
 </value>
                             </entry>
                             <entry>
-<key>Return Type</key>
+<key>HTTP Context Map</key>
 <value>
-    <name>Return Type</name>
+    <identifiesControllerService>org.apache.nifi.http.HttpContextMap</identifiesControllerService>
+    <name>HTTP Context Map</name>
 </value>
                             </entry>
                             <entry>
-<key>Path Not Found Behavior</key>
+<key>Attributes to add to the HTTP Response (Regex)</key>
 <value>
-    <name>Path Not Found Behavior</name>
+    <name>Attributes to add to the HTTP Response (Regex)</name>
 </value>
                             </entry>
                             <entry>
-<key>Null Value Representation</key>
+<key>content-type</key>
 <value>
-    <name>Null Value Representation</name>
-</value>
-                            </entry>
-                            <entry>
-<key>Max String Length</key>
-<value>
-    <name>Max String Length</name>
-</value>
-                            </entry>
-                            <entry>
-<key>email</key>
-<value>
-    <name>email</name>
-</value>
-                            </entry>
-                            <entry>
-<key>establishmentName</key>
-<value>
-    <name>establishmentName</name>
-</value>
-                            </entry>
-                            <entry>
-<key>name</key>
-<value>
-    <name>name</name>
+    <name>content-type</name>
 </value>
                             </entry>
                         </descriptors>
@@ -1029,36 +1570,19 @@
                         <penaltyDuration>30 sec</penaltyDuration>
                         <properties>
                             <entry>
-<key>Destination</key>
-<value>flowfile-attribute</value>
+<key>HTTP Status Code</key>
+<value>200</value>
                             </entry>
                             <entry>
-<key>Return Type</key>
-<value>auto-detect</value>
+<key>HTTP Context Map</key>
+<value>f1ea51b0-0cca-3206-0000-000000000000</value>
                             </entry>
                             <entry>
-<key>Path Not Found Behavior</key>
-<value>ignore</value>
+<key>Attributes to add to the HTTP Response (Regex)</key>
                             </entry>
                             <entry>
-<key>Null Value Representation</key>
-<value>empty string</value>
-                            </entry>
-                            <entry>
-<key>Max String Length</key>
-<value>20 MB</value>
-                            </entry>
-                            <entry>
-<key>email</key>
-<value>$.email</value>
-                            </entry>
-                            <entry>
-<key>establishmentName</key>
-<value>$.establishmentName</value>
-                            </entry>
-                            <entry>
-<key>name</key>
-<value>$.name</value>
+<key>content-type</key>
+<value>application/json</value>
                             </entry>
                         </properties>
                         <retryCount>10</retryCount>
@@ -1068,34 +1592,28 @@
                         <yieldDuration>1 sec</yieldDuration>
                     </config>
                     <executionNodeRestricted>false</executionNodeRestricted>
-                    <name>extrai dados conta criada</name>
+                    <name>HandleHttpResponse</name>
                     <relationships>
                         <autoTerminate>true</autoTerminate>
                         <name>failure</name>
                         <retry>false</retry>
                     </relationships>
                     <relationships>
-                        <autoTerminate>false</autoTerminate>
-                        <name>matched</name>
-                        <retry>false</retry>
-                    </relationships>
-                    <relationships>
                         <autoTerminate>true</autoTerminate>
-                        <name>unmatched</name>
+                        <name>success</name>
                         <retry>false</retry>
                     </relationships>
                     <state>RUNNING</state>
                     <style/>
-                    <type>org.apache.nifi.processors.standard.EvaluateJsonPath</type>
+                    <type>org.apache.nifi.processors.standard.HandleHttpResponse</type>
                 </processors>
                 <processors>
-                    <id>584f256b-c065-307d-0000-000000000000</id>
-                    <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
+                    <id>ddecc8fc-dc91-3ac6-0000-000000000000</id>
+                    <parentGroupId>0a08bef3-cdfc-3a6b-0000-000000000000</parentGroupId>
                     <position>
-                        <x>-680.0</x>
-                        <y>0.0</y>
+                        <x>-280.0</x>
+                        <y>520.0</y>
                     </position>
-                    <versionedComponentId>584f256b-c065-307d-966a-40eff63eaaab</versionedComponentId>
                     <bundle>
                         <artifact>nifi-standard-nar</artifact>
                         <group>org.apache.nifi</group>
@@ -1108,45 +1626,78 @@
                         <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                         <descriptors>
                             <entry>
-<key>File Size</key>
+<key>Replacement Strategy</key>
 <value>
-    <name>File Size</name>
+    <name>Replacement Strategy</name>
 </value>
                             </entry>
                             <entry>
-<key>Batch Size</key>
+<key>Regular Expression</key>
 <value>
-    <name>Batch Size</name>
+    <dependencies>
+        <dependentValues>Regex Replace</dependentValues>
+        <dependentValues>Literal Replace</dependentValues>
+        <propertyName>Replacement Strategy</propertyName>
+    </dependencies>
+    <name>Regular Expression</name>
 </value>
                             </entry>
                             <entry>
-<key>Data Format</key>
+<key>Replacement Value</key>
 <value>
-    <name>Data Format</name>
+    <dependencies>
+        <dependentValues>Prepend</dependentValues>
+        <dependentValues>Regex Replace</dependentValues>
+        <dependentValues>Always Replace</dependentValues>
+        <dependentValues>Append</dependentValues>
+        <dependentValues>Literal Replace</dependentValues>
+        <propertyName>Replacement Strategy</propertyName>
+    </dependencies>
+    <name>Replacement Value</name>
 </value>
                             </entry>
                             <entry>
-<key>Unique FlowFiles</key>
+<key>Text to Prepend</key>
 <value>
-    <name>Unique FlowFiles</name>
+    <dependencies>
+        <dependentValues>Surround</dependentValues>
+        <propertyName>Replacement Strategy</propertyName>
+    </dependencies>
+    <name>Text to Prepend</name>
 </value>
                             </entry>
                             <entry>
-<key>generate-ff-custom-text</key>
+<key>Text to Append</key>
 <value>
-    <name>generate-ff-custom-text</name>
+    <dependencies>
+        <dependentValues>Surround</dependentValues>
+        <propertyName>Replacement Strategy</propertyName>
+    </dependencies>
+    <name>Text to Append</name>
 </value>
                             </entry>
                             <entry>
-<key>character-set</key>
+<key>Character Set</key>
 <value>
-    <name>character-set</name>
+    <name>Character Set</name>
 </value>
                             </entry>
                             <entry>
-<key>mime-type</key>
+<key>Maximum Buffer Size</key>
 <value>
-    <name>mime-type</name>
+    <name>Maximum Buffer Size</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Evaluation Mode</key>
+<value>
+    <name>Evaluation Mode</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Line-by-Line Evaluation Mode</key>
+<value>
+    <name>Line-by-Line Evaluation Mode</name>
 </value>
                             </entry>
                         </descriptors>
@@ -1156,104 +1707,95 @@
                         <penaltyDuration>30 sec</penaltyDuration>
                         <properties>
                             <entry>
-<key>File Size</key>
-<value>0B</value>
+<key>Replacement Strategy</key>
+<value>Always Replace</value>
                             </entry>
                             <entry>
-<key>Batch Size</key>
-<value>1</value>
+<key>Regular Expression</key>
+<value>(?s)(^.*$)</value>
                             </entry>
                             <entry>
-<key>Data Format</key>
-<value>Text</value>
+<key>Replacement Value</key>
+<value>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+   &lt;meta http-equiv='Content-Type' content='text/html; charset=utf-8' /&gt;
+   &lt;meta http-equiv='X-UA-Compatible' content='IE=edge' /&gt;
+   &lt;meta name='viewport' content='width=device-width' /&gt;
+   &lt;title&gt;Atualização de Dados&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body style='background-color: #eaeaef; font-family: quicksand, sans-serif; color: #575757; font-size: 16px;'&gt;
+   &lt;table width='600' align='center' cellpadding='0' cellspacing='0'&gt;
+      &lt;tr align='center'&gt;
+         &lt;td style='padding: 14px'&gt;
+            &lt;img src='https://foodway-public-s3.s3.amazonaws.com/website-images/foodway-logo.png' width='50' alt='Foodway' /&gt;
+         &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr align='center'&gt;
+         &lt;td cellspacing='0'&gt;
+            &lt;table width='600' style='background-color: #ED0000; padding: 8px; border-radius: 16px 16px 0 0;'&gt;
+               &lt;tr&gt;
+                  &lt;td&gt; &lt;/td&gt;
+               &lt;/tr&gt;
+            &lt;/table&gt;
+            &lt;table width='600' style='background-color: #ffffff; padding: 16px; border-radius: 0 0 16px 16px;'&gt;
+               &lt;tr&gt;
+                  &lt;td&gt;
+                     &lt;p style='font-weight: bold'&gt;Atualização de Dados&lt;/p&gt;
+                     &lt;p&gt;Olá, ${name}&lt;/p&gt;
+                     &lt;p&gt;Gostaríamos de informar que os dados da sua conta foram atualizados com sucesso! Abaixo estão os detalhes atualizados:&lt;/p&gt;
+                     &lt;ul&gt;
+                        &lt;li&gt;&lt;strong&gt;Nome:&lt;/strong&gt; ${name}&lt;/li&gt;
+                        &lt;li&gt;&lt;strong&gt;Nome do Estabelecimento:&lt;/strong&gt; ${establishmentName}&lt;/li&gt;
+                        &lt;li&gt;&lt;strong&gt;E-mail:&lt;/strong&gt; ${email}&lt;/li&gt;
+                        &lt;li&gt;&lt;strong&gt;Telefone:&lt;/strong&gt; ${phone:isEmpty():ifElse('N/A')}&lt;/li&gt;
+                        &lt;li&gt;&lt;strong&gt;Descrição:&lt;/strong&gt; ${description:isEmpty():ifElse('N/A')}&lt;/li&gt;
+                        &lt;li&gt;&lt;strong&gt;Foto do Perfil:&lt;/strong&gt; ${profilePhoto:isEmpty():ifElse('N/A')}&lt;/li&gt;
+                        &lt;li&gt;&lt;strong&gt;Imagem de Capa do Perfil:&lt;/strong&gt; ${profileHeader:isEmpty():ifElse('N/A')}&lt;/li&gt;
+                     &lt;/ul&gt;
+                     &lt;p&gt;Se precisar fazer mais alguma alteração ou tiver alguma dúvida, não hesite em entrar em contato conosco.&lt;/p&gt;
+                     &lt;p&gt;Foodway. O caminho para a escolha perfeita! 🍽️💫&lt;/p&gt;
+                  &lt;/td&gt;
+               &lt;/tr&gt;
+            &lt;/table&gt;
+         &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr align='center'&gt;
+         &lt;td style='padding: 14px 0px 0px 0px'&gt; &lt;img src='https://foodway-public-s3.s3.amazonaws.com/website-images/foodway-logo.png' width='50' alt='Foodway' /&gt;
+         &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr align='center'&gt;
+         &lt;td&gt;
+            &lt;p&gt; Foodway&lt;br&gt; Rua Haddock Lobo, 595 - Cerqueira César, São Paulo - SP, 01414-001&lt;/p&gt;
+         &lt;/td&gt;
+      &lt;/tr&gt;
+   &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</value>
                             </entry>
                             <entry>
-<key>Unique FlowFiles</key>
-<value>false</value>
+<key>Text to Prepend</key>
                             </entry>
                             <entry>
-<key>generate-ff-custom-text</key>
+<key>Text to Append</key>
                             </entry>
                             <entry>
-<key>character-set</key>
+<key>Character Set</key>
 <value>UTF-8</value>
                             </entry>
                             <entry>
-<key>mime-type</key>
-<value>application/json</value>
-                            </entry>
-                        </properties>
-                        <retryCount>10</retryCount>
-                        <runDurationMillis>0</runDurationMillis>
-                        <schedulingPeriod>1 min</schedulingPeriod>
-                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
-                        <yieldDuration>1 sec</yieldDuration>
-                    </config>
-                    <executionNodeRestricted>false</executionNodeRestricted>
-                    <name>GenerateFlowFile</name>
-                    <relationships>
-                        <autoTerminate>false</autoTerminate>
-                        <name>success</name>
-                        <retry>false</retry>
-                    </relationships>
-                    <state>DISABLED</state>
-                    <style/>
-                    <type>org.apache.nifi.processors.standard.GenerateFlowFile</type>
-                </processors>
-                <processors>
-                    <id>660f03a0-1ef9-3807-0000-000000000000</id>
-                    <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
-                    <position>
-                        <x>304.0</x>
-                        <y>-128.0</y>
-                    </position>
-                    <versionedComponentId>27283bfe-75c5-3210-85ec-8b95b398f791</versionedComponentId>
-                    <bundle>
-                        <artifact>nifi-standard-nar</artifact>
-                        <group>org.apache.nifi</group>
-                        <version>1.25.0</version>
-                    </bundle>
-                    <config>
-                        <backoffMechanism>PENALIZE_FLOWFILE</backoffMechanism>
-                        <bulletinLevel>WARN</bulletinLevel>
-                        <comments></comments>
-                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
-                        <descriptors>
-                            <entry>
-<key>Routing Strategy</key>
-<value>
-    <name>Routing Strategy</name>
-</value>
+<key>Maximum Buffer Size</key>
+<value>1 MB</value>
                             </entry>
                             <entry>
-<key>isCustomer</key>
-<value>
-    <name>isCustomer</name>
-</value>
+<key>Evaluation Mode</key>
+<value>Entire text</value>
                             </entry>
                             <entry>
-<key>isEstablishment</key>
-<value>
-    <name>isEstablishment</name>
-</value>
-                            </entry>
-                        </descriptors>
-                        <executionNode>ALL</executionNode>
-                        <lossTolerant>false</lossTolerant>
-                        <maxBackoffPeriod>10 mins</maxBackoffPeriod>
-                        <penaltyDuration>30 sec</penaltyDuration>
-                        <properties>
-                            <entry>
-<key>Routing Strategy</key>
-<value>Route to Property name</value>
-                            </entry>
-                            <entry>
-<key>isCustomer</key>
-<value>${typeUser:equals('CUSTOMER')}</value>
-                            </entry>
-                            <entry>
-<key>isEstablishment</key>
-<value>${typeUser:equals('ESTABLISHMENT')}</value>
+<key>Line-by-Line Evaluation Mode</key>
+<value>All</value>
                             </entry>
                         </properties>
                         <retryCount>10</retryCount>
@@ -1263,32 +1805,27 @@
                         <yieldDuration>1 sec</yieldDuration>
                     </config>
                     <executionNodeRestricted>false</executionNodeRestricted>
-                    <name>route to path</name>
+                    <name>email establishment</name>
                     <relationships>
                         <autoTerminate>true</autoTerminate>
-                        <name>isCustomer</name>
-                        <retry>false</retry>
-                    </relationships>
-                    <relationships>
-                        <autoTerminate>true</autoTerminate>
-                        <name>isEstablishment</name>
+                        <name>failure</name>
                         <retry>false</retry>
                     </relationships>
                     <relationships>
                         <autoTerminate>false</autoTerminate>
-                        <name>unmatched</name>
+                        <name>success</name>
                         <retry>false</retry>
                     </relationships>
                     <state>RUNNING</state>
                     <style/>
-                    <type>org.apache.nifi.processors.standard.RouteOnAttribute</type>
+                    <type>org.apache.nifi.processors.standard.ReplaceText</type>
                 </processors>
                 <processors>
-                    <id>8456cfe6-7575-3c0b-0000-000000000000</id>
-                    <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
+                    <id>ee44e9c3-a2b7-3dbb-0000-000000000000</id>
+                    <parentGroupId>0a08bef3-cdfc-3a6b-0000-000000000000</parentGroupId>
                     <position>
                         <x>-680.0</x>
-                        <y>224.0</y>
+                        <y>112.0</y>
                     </position>
                     <versionedComponentId>8456cfe6-7575-3c0b-9205-60ffaa160944</versionedComponentId>
                     <bundle>
@@ -1443,245 +1980,313 @@
                     <style/>
                     <type>org.apache.nifi.processors.standard.ReplaceText</type>
                 </processors>
-                <processors>
-                    <id>ede69166-67a2-3c57-0000-000000000000</id>
+            </contents>
+            <defaultBackPressureDataSizeThreshold>1 GB</defaultBackPressureDataSizeThreshold>
+            <defaultBackPressureObjectThreshold>10000</defaultBackPressureObjectThreshold>
+            <defaultFlowFileExpiration>0 sec</defaultFlowFileExpiration>
+            <flowfileConcurrency>UNBOUNDED</flowfileConcurrency>
+            <flowfileOutboundPolicy>STREAM_WHEN_AVAILABLE</flowfileOutboundPolicy>
+            <logFileSuffix></logFileSuffix>
+            <name>account updated</name>
+            <variables/>
+        </processGroups>
+        <processGroups>
+            <id>326cfbe5-5145-3753-0000-000000000000</id>
+            <parentGroupId>f63adb24-d705-3b80-0000-000000000000</parentGroupId>
+            <position>
+                <x>496.0</x>
+                <y>536.5743478677939</y>
+            </position>
+            <versionedComponentId>326cfbe5-5145-3753-9b88-18075f5eecfe</versionedComponentId>
+            <comments></comments>
+            <contents>
+                <connections>
+                    <id>2e0846bc-3611-3e92-0000-000000000000</id>
+                    <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
+                        <id>ea8c3df2-bc77-3d37-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                    <name></name>
+                    <selectedRelationships>isEstablishment</selectedRelationships>
+                    <source>
+                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
+                        <id>5db49f79-2a08-3a75-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>44c0cc35-e8b5-33b4-0000-000000000000</id>
+                    <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
+                    <versionedComponentId>44c0cc35-e8b5-33b4-8221-acfc0d4195cd</versionedComponentId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
+                        <id>8456cfe6-7575-3c0b-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                        <versionedComponentId>8456cfe6-7575-3c0b-9205-60ffaa160944</versionedComponentId>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                    <name></name>
+                    <selectedRelationships>success</selectedRelationships>
+                    <source>
+                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
+                        <id>584f256b-c065-307d-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                        <versionedComponentId>584f256b-c065-307d-966a-40eff63eaaab</versionedComponentId>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>55c9066b-f297-31e2-0000-000000000000</id>
+                    <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
+                    <versionedComponentId>55c9066b-f297-31e2-9377-68159399f2a8</versionedComponentId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
+                        <id>ede69166-67a2-3c57-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                        <versionedComponentId>ede69166-67a2-3c57-b04d-5f947ce8c43f</versionedComponentId>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                    <name></name>
+                    <selectedRelationships>success</selectedRelationships>
+                    <source>
+                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
+                        <id>f84251c3-7ecc-3581-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                        <versionedComponentId>878a8a25-db57-3737-a599-9a3e642b4da4</versionedComponentId>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>58d9251e-71d0-35a3-0000-000000000000</id>
+                    <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
+                        <id>013f4ec8-6d15-3371-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                        <versionedComponentId>01925796-ae20-30c5-8c84-3dce5993816e</versionedComponentId>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                    <name></name>
+                    <selectedRelationships>success</selectedRelationships>
+                    <source>
+                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
+                        <id>ea8c3df2-bc77-3d37-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>63ab3a32-7fb3-3033-0000-000000000000</id>
+                    <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
+                        <id>b8459e40-e083-3642-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                    <name></name>
+                    <selectedRelationships>isCustomer</selectedRelationships>
+                    <source>
+                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
+                        <id>5db49f79-2a08-3a75-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>846e4aa9-054e-319f-0000-000000000000</id>
+                    <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
+                    <versionedComponentId>e9fd2ec1-2617-359a-bf14-452fb741c2e9</versionedComponentId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
+                        <id>f84251c3-7ecc-3581-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                        <versionedComponentId>878a8a25-db57-3737-a599-9a3e642b4da4</versionedComponentId>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                    <name></name>
+                    <selectedRelationships>success</selectedRelationships>
+                    <source>
+                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
+                        <id>013f4ec8-6d15-3371-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                        <versionedComponentId>01925796-ae20-30c5-8c84-3dce5993816e</versionedComponentId>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>9197feb5-7dc4-3fbf-0000-000000000000</id>
+                    <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
+                        <id>013f4ec8-6d15-3371-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                        <versionedComponentId>01925796-ae20-30c5-8c84-3dce5993816e</versionedComponentId>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                    <name></name>
+                    <selectedRelationships>success</selectedRelationships>
+                    <source>
+                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
+                        <id>b8459e40-e083-3642-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>94230f00-92c5-3beb-0000-000000000000</id>
+                    <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
+                        <id>1c8c0369-fdf6-3dcb-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                        <versionedComponentId>46b93616-08f9-3c45-a3c7-b967e0e7e71b</versionedComponentId>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                    <name></name>
+                    <source>
+                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
+                        <id>d9b954ea-c596-32f8-0000-000000000000</id>
+                        <type>INPUT_PORT</type>
+                        <versionedComponentId>73fae31d-7c52-3c42-b2b0-6238916c4e92</versionedComponentId>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>af361935-dea5-3630-0000-000000000000</id>
+                    <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
+                        <id>5db49f79-2a08-3a75-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                    <name></name>
+                    <selectedRelationships>matched</selectedRelationships>
+                    <source>
+                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
+                        <id>1c8c0369-fdf6-3dcb-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                        <versionedComponentId>46b93616-08f9-3c45-a3c7-b967e0e7e71b</versionedComponentId>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>f01b51e3-10ca-3bd0-0000-000000000000</id>
+                    <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
+                    <versionedComponentId>f01b51e3-10ca-3bd0-b49b-6d0e2da189ab</versionedComponentId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
+                        <id>1c8c0369-fdf6-3dcb-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                        <versionedComponentId>46b93616-08f9-3c45-a3c7-b967e0e7e71b</versionedComponentId>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                    <name></name>
+                    <selectedRelationships>success</selectedRelationships>
+                    <source>
+                        <groupId>326cfbe5-5145-3753-0000-000000000000</groupId>
+                        <id>8456cfe6-7575-3c0b-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                        <versionedComponentId>8456cfe6-7575-3c0b-9205-60ffaa160944</versionedComponentId>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <inputPorts>
+                    <id>d9b954ea-c596-32f8-0000-000000000000</id>
                     <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
                     <position>
-                        <x>280.0</x>
+                        <x>88.0</x>
+                        <y>0.0</y>
+                    </position>
+                    <versionedComponentId>73fae31d-7c52-3c42-b2b0-6238916c4e92</versionedComponentId>
+                    <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                    <name>entry point</name>
+                    <state>RUNNING</state>
+                    <type>INPUT_PORT</type>
+                </inputPorts>
+                <processors>
+                    <id>013f4ec8-6d15-3371-0000-000000000000</id>
+                    <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>56.0</x>
                         <y>784.0</y>
                     </position>
-                    <versionedComponentId>ede69166-67a2-3c57-b04d-5f947ce8c43f</versionedComponentId>
-                    <bundle>
-                        <artifact>nifi-standard-nar</artifact>
-                        <group>org.apache.nifi</group>
-                        <version>1.25.0</version>
-                    </bundle>
-                    <config>
-                        <backoffMechanism>PENALIZE_FLOWFILE</backoffMechanism>
-                        <bulletinLevel>WARN</bulletinLevel>
-                        <comments></comments>
-                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
-                        <descriptors>
-                            <entry>
-<key>HTTP Status Code</key>
-<value>
-    <name>HTTP Status Code</name>
-</value>
-                            </entry>
-                            <entry>
-<key>HTTP Context Map</key>
-<value>
-    <identifiesControllerService>org.apache.nifi.http.HttpContextMap</identifiesControllerService>
-    <name>HTTP Context Map</name>
-</value>
-                            </entry>
-                            <entry>
-<key>Attributes to add to the HTTP Response (Regex)</key>
-<value>
-    <name>Attributes to add to the HTTP Response (Regex)</name>
-</value>
-                            </entry>
-                            <entry>
-<key>content-type</key>
-<value>
-    <name>content-type</name>
-</value>
-                            </entry>
-                        </descriptors>
-                        <executionNode>ALL</executionNode>
-                        <lossTolerant>false</lossTolerant>
-                        <maxBackoffPeriod>10 mins</maxBackoffPeriod>
-                        <penaltyDuration>30 sec</penaltyDuration>
-                        <properties>
-                            <entry>
-<key>HTTP Status Code</key>
-<value>200</value>
-                            </entry>
-                            <entry>
-<key>HTTP Context Map</key>
-<value>f1ea51b0-0cca-3206-0000-000000000000</value>
-                            </entry>
-                            <entry>
-<key>Attributes to add to the HTTP Response (Regex)</key>
-                            </entry>
-                            <entry>
-<key>content-type</key>
-<value>application/json</value>
-                            </entry>
-                        </properties>
-                        <retryCount>10</retryCount>
-                        <runDurationMillis>0</runDurationMillis>
-                        <schedulingPeriod>0 sec</schedulingPeriod>
-                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
-                        <yieldDuration>1 sec</yieldDuration>
-                    </config>
-                    <executionNodeRestricted>false</executionNodeRestricted>
-                    <name>HandleHttpResponse</name>
-                    <relationships>
-                        <autoTerminate>true</autoTerminate>
-                        <name>failure</name>
-                        <retry>false</retry>
-                    </relationships>
-                    <relationships>
-                        <autoTerminate>true</autoTerminate>
-                        <name>success</name>
-                        <retry>false</retry>
-                    </relationships>
-                    <state>RUNNING</state>
-                    <style/>
-                    <type>org.apache.nifi.processors.standard.HandleHttpResponse</type>
-                </processors>
-                <processors>
-                    <id>f17727e9-6dde-35e9-0000-000000000000</id>
-                    <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
-                    <position>
-                        <x>640.0</x>
-                        <y>104.0</y>
-                    </position>
-                    <versionedComponentId>a61fa7ad-3b08-39a6-96df-e19a4011843d</versionedComponentId>
-                    <bundle>
-                        <artifact>nifi-standard-nar</artifact>
-                        <group>org.apache.nifi</group>
-                        <version>1.25.0</version>
-                    </bundle>
-                    <config>
-                        <backoffMechanism>PENALIZE_FLOWFILE</backoffMechanism>
-                        <bulletinLevel>WARN</bulletinLevel>
-                        <comments></comments>
-                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
-                        <descriptors>
-                            <entry>
-<key>Destination</key>
-<value>
-    <name>Destination</name>
-</value>
-                            </entry>
-                            <entry>
-<key>Return Type</key>
-<value>
-    <name>Return Type</name>
-</value>
-                            </entry>
-                            <entry>
-<key>Path Not Found Behavior</key>
-<value>
-    <name>Path Not Found Behavior</name>
-</value>
-                            </entry>
-                            <entry>
-<key>Null Value Representation</key>
-<value>
-    <name>Null Value Representation</name>
-</value>
-                            </entry>
-                            <entry>
-<key>Max String Length</key>
-<value>
-    <name>Max String Length</name>
-</value>
-                            </entry>
-                            <entry>
-<key>email</key>
-<value>
-    <name>email</name>
-</value>
-                            </entry>
-                            <entry>
-<key>idade</key>
-<value>
-    <name>idade</name>
-</value>
-                            </entry>
-                            <entry>
-<key>nome</key>
-<value>
-    <name>nome</name>
-</value>
-                            </entry>
-                            <entry>
-<key>sobrenome</key>
-<value>
-    <name>sobrenome</name>
-</value>
-                            </entry>
-                        </descriptors>
-                        <executionNode>ALL</executionNode>
-                        <lossTolerant>false</lossTolerant>
-                        <maxBackoffPeriod>10 mins</maxBackoffPeriod>
-                        <penaltyDuration>30 sec</penaltyDuration>
-                        <properties>
-                            <entry>
-<key>Destination</key>
-<value>flowfile-attribute</value>
-                            </entry>
-                            <entry>
-<key>Return Type</key>
-<value>auto-detect</value>
-                            </entry>
-                            <entry>
-<key>Path Not Found Behavior</key>
-<value>ignore</value>
-                            </entry>
-                            <entry>
-<key>Null Value Representation</key>
-<value>empty string</value>
-                            </entry>
-                            <entry>
-<key>Max String Length</key>
-<value>20 MB</value>
-                            </entry>
-                            <entry>
-<key>email</key>
-<value>$.email</value>
-                            </entry>
-                            <entry>
-<key>idade</key>
-<value>$.idade</value>
-                            </entry>
-                            <entry>
-<key>nome</key>
-<value>$.nome</value>
-                            </entry>
-                            <entry>
-<key>sobrenome</key>
-<value>$.sobrenome</value>
-                            </entry>
-                        </properties>
-                        <retryCount>10</retryCount>
-                        <runDurationMillis>0</runDurationMillis>
-                        <schedulingPeriod>0 sec</schedulingPeriod>
-                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
-                        <yieldDuration>1 sec</yieldDuration>
-                    </config>
-                    <executionNodeRestricted>false</executionNodeRestricted>
-                    <name>extrai dados conta criada</name>
-                    <relationships>
-                        <autoTerminate>true</autoTerminate>
-                        <name>failure</name>
-                        <retry>false</retry>
-                    </relationships>
-                    <relationships>
-                        <autoTerminate>false</autoTerminate>
-                        <name>matched</name>
-                        <retry>false</retry>
-                    </relationships>
-                    <relationships>
-                        <autoTerminate>true</autoTerminate>
-                        <name>unmatched</name>
-                        <retry>false</retry>
-                    </relationships>
-                    <state>STOPPED</state>
-                    <style/>
-                    <type>org.apache.nifi.processors.standard.EvaluateJsonPath</type>
-                </processors>
-                <processors>
-                    <id>f54143c0-01dc-3c5b-0000-000000000000</id>
-                    <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
-                    <position>
-                        <x>640.0</x>
-                        <y>312.0</y>
-                    </position>
-                    <versionedComponentId>9df86032-557d-380d-b271-6bbea8b52517</versionedComponentId>
+                    <versionedComponentId>01925796-ae20-30c5-8c84-3dce5993816e</versionedComponentId>
                     <bundle>
                         <artifact>nifi-standard-nar</artifact>
                         <group>org.apache.nifi</group>
@@ -1857,7 +2462,7 @@
                             </entry>
                             <entry>
 <key>SMTP Username</key>
-<value>marcelinhoalcantaracruz@gmail.com</value>
+<value>#{smtp.user}</value>
                             </entry>
                             <entry>
 <key>SMTP Password</key>
@@ -1883,11 +2488,11 @@
                             </entry>
                             <entry>
 <key>Content Type</key>
-<value>text/plain</value>
+<value>text/html</value>
                             </entry>
                             <entry>
 <key>From</key>
-<value>marcelinhoalcantaracruz@gmail.com</value>
+<value>#{smtp.user}</value>
                             </entry>
                             <entry>
 <key>To</key>
@@ -1901,17 +2506,14 @@
                             </entry>
                             <entry>
 <key>Subject</key>
-<value>Sua conta FoodWay foi criada</value>
+<value>Sua conta FoodWay foi criada!</value>
                             </entry>
                             <entry>
 <key>Message</key>
-<value>Olá, ${nome} ${sobrenome}, de ${idade} anos.
-
-Sua conta FoodWay acabou de ser criada com sucesso!</value>
                             </entry>
                             <entry>
 <key>email-ff-content-as-message</key>
-<value>false</value>
+<value>true</value>
                             </entry>
                             <entry>
 <key>input-character-set</key>
@@ -1949,11 +2551,1026 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
                     <type>org.apache.nifi.processors.standard.PutEmail</type>
                 </processors>
                 <processors>
-                    <id>f84251c3-7ecc-3581-0000-000000000000</id>
+                    <id>1c8c0369-fdf6-3dcb-0000-000000000000</id>
                     <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
                     <position>
                         <x>32.0</x>
-                        <y>536.0</y>
+                        <y>112.0</y>
+                    </position>
+                    <versionedComponentId>46b93616-08f9-3c45-a3c7-b967e0e7e71b</versionedComponentId>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.25.0</version>
+                    </bundle>
+                    <config>
+                        <backoffMechanism>PENALIZE_FLOWFILE</backoffMechanism>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Destination</key>
+<value>
+    <name>Destination</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Return Type</key>
+<value>
+    <name>Return Type</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Path Not Found Behavior</key>
+<value>
+    <name>Path Not Found Behavior</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Null Value Representation</key>
+<value>
+    <name>Null Value Representation</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Max String Length</key>
+<value>
+    <name>Max String Length</name>
+</value>
+                            </entry>
+                            <entry>
+<key>email</key>
+<value>
+    <name>email</name>
+</value>
+                            </entry>
+                            <entry>
+<key>establishmentName</key>
+<value>
+    <name>establishmentName</name>
+</value>
+                            </entry>
+                            <entry>
+<key>name</key>
+<value>
+    <name>name</name>
+</value>
+                            </entry>
+                            <entry>
+<key>typeUser</key>
+<value>
+    <name>typeUser</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <maxBackoffPeriod>10 mins</maxBackoffPeriod>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Destination</key>
+<value>flowfile-attribute</value>
+                            </entry>
+                            <entry>
+<key>Return Type</key>
+<value>auto-detect</value>
+                            </entry>
+                            <entry>
+<key>Path Not Found Behavior</key>
+<value>ignore</value>
+                            </entry>
+                            <entry>
+<key>Null Value Representation</key>
+<value>empty string</value>
+                            </entry>
+                            <entry>
+<key>Max String Length</key>
+<value>20 MB</value>
+                            </entry>
+                            <entry>
+<key>email</key>
+<value>$.email</value>
+                            </entry>
+                            <entry>
+<key>establishmentName</key>
+<value>$.establishmentName</value>
+                            </entry>
+                            <entry>
+<key>name</key>
+<value>$.name</value>
+                            </entry>
+                            <entry>
+<key>typeUser</key>
+<value>$.typeUser</value>
+                            </entry>
+                        </properties>
+                        <retryCount>10</retryCount>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <executionNodeRestricted>false</executionNodeRestricted>
+                    <name>extrai dados conta criada</name>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>failure</name>
+                        <retry>false</retry>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>matched</name>
+                        <retry>false</retry>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>unmatched</name>
+                        <retry>false</retry>
+                    </relationships>
+                    <state>RUNNING</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.EvaluateJsonPath</type>
+                </processors>
+                <processors>
+                    <id>584f256b-c065-307d-0000-000000000000</id>
+                    <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>-680.0</x>
+                        <y>-112.0</y>
+                    </position>
+                    <versionedComponentId>584f256b-c065-307d-966a-40eff63eaaab</versionedComponentId>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.25.0</version>
+                    </bundle>
+                    <config>
+                        <backoffMechanism>PENALIZE_FLOWFILE</backoffMechanism>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>File Size</key>
+<value>
+    <name>File Size</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Batch Size</key>
+<value>
+    <name>Batch Size</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Data Format</key>
+<value>
+    <name>Data Format</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Unique FlowFiles</key>
+<value>
+    <name>Unique FlowFiles</name>
+</value>
+                            </entry>
+                            <entry>
+<key>generate-ff-custom-text</key>
+<value>
+    <name>generate-ff-custom-text</name>
+</value>
+                            </entry>
+                            <entry>
+<key>character-set</key>
+<value>
+    <name>character-set</name>
+</value>
+                            </entry>
+                            <entry>
+<key>mime-type</key>
+<value>
+    <name>mime-type</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <maxBackoffPeriod>10 mins</maxBackoffPeriod>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>File Size</key>
+<value>0B</value>
+                            </entry>
+                            <entry>
+<key>Batch Size</key>
+<value>1</value>
+                            </entry>
+                            <entry>
+<key>Data Format</key>
+<value>Text</value>
+                            </entry>
+                            <entry>
+<key>Unique FlowFiles</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>generate-ff-custom-text</key>
+                            </entry>
+                            <entry>
+<key>character-set</key>
+<value>UTF-8</value>
+                            </entry>
+                            <entry>
+<key>mime-type</key>
+<value>application/json</value>
+                            </entry>
+                        </properties>
+                        <retryCount>10</retryCount>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>1 min</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <executionNodeRestricted>false</executionNodeRestricted>
+                    <name>GenerateFlowFile</name>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                        <retry>false</retry>
+                    </relationships>
+                    <state>DISABLED</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.GenerateFlowFile</type>
+                </processors>
+                <processors>
+                    <id>5db49f79-2a08-3a75-0000-000000000000</id>
+                    <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>32.0</x>
+                        <y>312.0</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.25.0</version>
+                    </bundle>
+                    <config>
+                        <backoffMechanism>PENALIZE_FLOWFILE</backoffMechanism>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Routing Strategy</key>
+<value>
+    <name>Routing Strategy</name>
+</value>
+                            </entry>
+                            <entry>
+<key>isCustomer</key>
+<value>
+    <name>isCustomer</name>
+</value>
+                            </entry>
+                            <entry>
+<key>isEstablishment</key>
+<value>
+    <name>isEstablishment</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <maxBackoffPeriod>10 mins</maxBackoffPeriod>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Routing Strategy</key>
+<value>Route to Property name</value>
+                            </entry>
+                            <entry>
+<key>isCustomer</key>
+<value>${typeUser:equals('CLIENT')}</value>
+                            </entry>
+                            <entry>
+<key>isEstablishment</key>
+<value>${typeUser:equals('ESTABLISHMENT')}</value>
+                            </entry>
+                        </properties>
+                        <retryCount>10</retryCount>
+                        <runDurationMillis>25</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <executionNodeRestricted>false</executionNodeRestricted>
+                    <name>verifica se é estab ou customer</name>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>isCustomer</name>
+                        <retry>false</retry>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>isEstablishment</name>
+                        <retry>false</retry>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>unmatched</name>
+                        <retry>false</retry>
+                    </relationships>
+                    <state>RUNNING</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.RouteOnAttribute</type>
+                </processors>
+                <processors>
+                    <id>8456cfe6-7575-3c0b-0000-000000000000</id>
+                    <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>-680.0</x>
+                        <y>112.0</y>
+                    </position>
+                    <versionedComponentId>8456cfe6-7575-3c0b-9205-60ffaa160944</versionedComponentId>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.25.0</version>
+                    </bundle>
+                    <config>
+                        <backoffMechanism>PENALIZE_FLOWFILE</backoffMechanism>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Replacement Strategy</key>
+<value>
+    <name>Replacement Strategy</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Regular Expression</key>
+<value>
+    <dependencies>
+        <dependentValues>Regex Replace</dependentValues>
+        <dependentValues>Literal Replace</dependentValues>
+        <propertyName>Replacement Strategy</propertyName>
+    </dependencies>
+    <name>Regular Expression</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Replacement Value</key>
+<value>
+    <dependencies>
+        <dependentValues>Prepend</dependentValues>
+        <dependentValues>Regex Replace</dependentValues>
+        <dependentValues>Always Replace</dependentValues>
+        <dependentValues>Append</dependentValues>
+        <dependentValues>Literal Replace</dependentValues>
+        <propertyName>Replacement Strategy</propertyName>
+    </dependencies>
+    <name>Replacement Value</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Text to Prepend</key>
+<value>
+    <dependencies>
+        <dependentValues>Surround</dependentValues>
+        <propertyName>Replacement Strategy</propertyName>
+    </dependencies>
+    <name>Text to Prepend</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Text to Append</key>
+<value>
+    <dependencies>
+        <dependentValues>Surround</dependentValues>
+        <propertyName>Replacement Strategy</propertyName>
+    </dependencies>
+    <name>Text to Append</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Character Set</key>
+<value>
+    <name>Character Set</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Maximum Buffer Size</key>
+<value>
+    <name>Maximum Buffer Size</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Evaluation Mode</key>
+<value>
+    <name>Evaluation Mode</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Line-by-Line Evaluation Mode</key>
+<value>
+    <name>Line-by-Line Evaluation Mode</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <maxBackoffPeriod>10 mins</maxBackoffPeriod>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Replacement Strategy</key>
+<value>Always Replace</value>
+                            </entry>
+                            <entry>
+<key>Regular Expression</key>
+<value>(?s)(^.*$)</value>
+                            </entry>
+                            <entry>
+<key>Replacement Value</key>
+<value>{
+	"name": "Leo",
+	"email": "leonardo.oliveira@sptech.school"
+}</value>
+                            </entry>
+                            <entry>
+<key>Text to Prepend</key>
+                            </entry>
+                            <entry>
+<key>Text to Append</key>
+                            </entry>
+                            <entry>
+<key>Character Set</key>
+<value>UTF-8</value>
+                            </entry>
+                            <entry>
+<key>Maximum Buffer Size</key>
+<value>1 MB</value>
+                            </entry>
+                            <entry>
+<key>Evaluation Mode</key>
+<value>Entire text</value>
+                            </entry>
+                            <entry>
+<key>Line-by-Line Evaluation Mode</key>
+<value>All</value>
+                            </entry>
+                        </properties>
+                        <retryCount>10</retryCount>
+                        <runDurationMillis>25</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <executionNodeRestricted>false</executionNodeRestricted>
+                    <name>ReplaceText</name>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>failure</name>
+                        <retry>false</retry>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                        <retry>false</retry>
+                    </relationships>
+                    <state>RUNNING</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.ReplaceText</type>
+                </processors>
+                <processors>
+                    <id>b8459e40-e083-3642-0000-000000000000</id>
+                    <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>328.0</x>
+                        <y>520.0</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.25.0</version>
+                    </bundle>
+                    <config>
+                        <backoffMechanism>PENALIZE_FLOWFILE</backoffMechanism>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Replacement Strategy</key>
+<value>
+    <name>Replacement Strategy</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Regular Expression</key>
+<value>
+    <dependencies>
+        <dependentValues>Regex Replace</dependentValues>
+        <dependentValues>Literal Replace</dependentValues>
+        <propertyName>Replacement Strategy</propertyName>
+    </dependencies>
+    <name>Regular Expression</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Replacement Value</key>
+<value>
+    <dependencies>
+        <dependentValues>Prepend</dependentValues>
+        <dependentValues>Regex Replace</dependentValues>
+        <dependentValues>Always Replace</dependentValues>
+        <dependentValues>Append</dependentValues>
+        <dependentValues>Literal Replace</dependentValues>
+        <propertyName>Replacement Strategy</propertyName>
+    </dependencies>
+    <name>Replacement Value</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Text to Prepend</key>
+<value>
+    <dependencies>
+        <dependentValues>Surround</dependentValues>
+        <propertyName>Replacement Strategy</propertyName>
+    </dependencies>
+    <name>Text to Prepend</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Text to Append</key>
+<value>
+    <dependencies>
+        <dependentValues>Surround</dependentValues>
+        <propertyName>Replacement Strategy</propertyName>
+    </dependencies>
+    <name>Text to Append</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Character Set</key>
+<value>
+    <name>Character Set</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Maximum Buffer Size</key>
+<value>
+    <name>Maximum Buffer Size</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Evaluation Mode</key>
+<value>
+    <name>Evaluation Mode</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Line-by-Line Evaluation Mode</key>
+<value>
+    <name>Line-by-Line Evaluation Mode</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <maxBackoffPeriod>10 mins</maxBackoffPeriod>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Replacement Strategy</key>
+<value>Always Replace</value>
+                            </entry>
+                            <entry>
+<key>Regular Expression</key>
+<value>(?s)(^.*$)</value>
+                            </entry>
+                            <entry>
+<key>Replacement Value</key>
+<value>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+   &lt;meta http-equiv='Content-Type' content='text/html; charset=utf-8' /&gt;
+   &lt;meta http-equiv='X-UA-Compatible' content='IE=edge' /&gt;
+   &lt;meta name='viewport' content='width=device-width' /&gt;
+   &lt;title&gt;Bem-vindo!&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body style='background-color: #eaeaef; font-family: quicksand, sans-serif; color: #575757; font-size:
+   16px;'&gt;
+   &lt;table width='600' align='center' cellpadding='0' cellspacing='0'&gt;
+      &lt;tr align='center'&gt;
+         &lt;td style='padding: 14px'&gt; 
+            &lt;img
+               src='https://foodway-public-s3.s3.amazonaws.com/website-images/foodway-logo.png'
+               width='50' alt='Foodway' /&gt;
+         &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr align='center'&gt;
+         &lt;td cellspacing='0'&gt;
+            &lt;table width='600' style='background-color: #ED0000; padding: 8px; border-radius: 16px 16px 0 0;'&gt;
+               &lt;tr&gt;
+                  &lt;td&gt; &lt;/td&gt;
+               &lt;/tr&gt;
+            &lt;/table&gt;
+            &lt;table width='600' style='background-color: #ffffff; padding: 16px; border-radius: 0 0 16px 16px;'&gt;
+               &lt;tr&gt;
+                  &lt;td&gt;
+                     &lt;p style='font-weight: bold'&gt; Seja Bem-Vindo à Foodway! 🥳✨&lt;/p&gt;
+                     &lt;p&gt;Olá, ${name}! 🌟&lt;/p&gt;
+                     &lt;p&gt;É com imensa alegria que te damos as boas-vindas! 🎉 &lt;/p&gt;
+                     &lt;p&gt;
+						Seu cadastro foi concluído com êxito, e agora, um universo de sabores aguarda por você no
+                        aplicativo Foodway. Estamos empolgados em fazer parte da sua jornada culinária.
+                     &lt;/p&gt;
+                     &lt;p&gt;
+                        Prepare-se para explorar, descobrir e se deliciar com as infinitas possibilidades que só a
+                        Foodway pode oferecer.
+                     &lt;/p&gt;
+                     &lt;p&gt;Bem-vindo à família Foodway! 🍽️💫&lt;/p&gt;
+                  &lt;/td&gt;
+               &lt;/tr&gt;
+            &lt;/table&gt;
+         &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr align='center'&gt;
+         &lt;td style='padding: 14px 0px 0px 0px'&gt; &lt;img
+               src='https://foodway-public-s3.s3.amazonaws.com/website-images/foodway-logo.png'
+               width='50' alt='Foodway' /&gt;
+         &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr align='center'&gt;
+         &lt;td&gt;
+            &lt;p&gt; Foodway&lt;br&gt; Rua Haddock Lobo, 595 - Cerqueira César, São Paulo - SP, 01414-001&lt;/p&gt;
+         &lt;/td&gt;
+      &lt;/tr&gt;
+   &lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;</value>
+                            </entry>
+                            <entry>
+<key>Text to Prepend</key>
+                            </entry>
+                            <entry>
+<key>Text to Append</key>
+                            </entry>
+                            <entry>
+<key>Character Set</key>
+<value>UTF-8</value>
+                            </entry>
+                            <entry>
+<key>Maximum Buffer Size</key>
+<value>1 MB</value>
+                            </entry>
+                            <entry>
+<key>Evaluation Mode</key>
+<value>Entire text</value>
+                            </entry>
+                            <entry>
+<key>Line-by-Line Evaluation Mode</key>
+<value>All</value>
+                            </entry>
+                        </properties>
+                        <retryCount>10</retryCount>
+                        <runDurationMillis>25</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <executionNodeRestricted>false</executionNodeRestricted>
+                    <name>email customer</name>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>failure</name>
+                        <retry>false</retry>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                        <retry>false</retry>
+                    </relationships>
+                    <state>RUNNING</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.ReplaceText</type>
+                </processors>
+                <processors>
+                    <id>ea8c3df2-bc77-3d37-0000-000000000000</id>
+                    <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>-280.0</x>
+                        <y>520.0</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.25.0</version>
+                    </bundle>
+                    <config>
+                        <backoffMechanism>PENALIZE_FLOWFILE</backoffMechanism>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Replacement Strategy</key>
+<value>
+    <name>Replacement Strategy</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Regular Expression</key>
+<value>
+    <dependencies>
+        <dependentValues>Regex Replace</dependentValues>
+        <dependentValues>Literal Replace</dependentValues>
+        <propertyName>Replacement Strategy</propertyName>
+    </dependencies>
+    <name>Regular Expression</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Replacement Value</key>
+<value>
+    <dependencies>
+        <dependentValues>Prepend</dependentValues>
+        <dependentValues>Regex Replace</dependentValues>
+        <dependentValues>Always Replace</dependentValues>
+        <dependentValues>Append</dependentValues>
+        <dependentValues>Literal Replace</dependentValues>
+        <propertyName>Replacement Strategy</propertyName>
+    </dependencies>
+    <name>Replacement Value</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Text to Prepend</key>
+<value>
+    <dependencies>
+        <dependentValues>Surround</dependentValues>
+        <propertyName>Replacement Strategy</propertyName>
+    </dependencies>
+    <name>Text to Prepend</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Text to Append</key>
+<value>
+    <dependencies>
+        <dependentValues>Surround</dependentValues>
+        <propertyName>Replacement Strategy</propertyName>
+    </dependencies>
+    <name>Text to Append</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Character Set</key>
+<value>
+    <name>Character Set</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Maximum Buffer Size</key>
+<value>
+    <name>Maximum Buffer Size</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Evaluation Mode</key>
+<value>
+    <name>Evaluation Mode</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Line-by-Line Evaluation Mode</key>
+<value>
+    <name>Line-by-Line Evaluation Mode</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <maxBackoffPeriod>10 mins</maxBackoffPeriod>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Replacement Strategy</key>
+<value>Always Replace</value>
+                            </entry>
+                            <entry>
+<key>Regular Expression</key>
+<value>(?s)(^.*$)</value>
+                            </entry>
+                            <entry>
+<key>Replacement Value</key>
+<value>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+   &lt;meta http-equiv='Content-Type' content='text/html; charset=utf-8' /&gt;
+   &lt;meta http-equiv='X-UA-Compatible' content='IE=edge' /&gt;
+   &lt;meta name='viewport' content='width=device-width' /&gt;
+   &lt;title&gt;Bem-vindo!&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body style='background-color: #eaeaef; font-family: quicksand, sans-serif; color: #575757; font-size: 16px;'&gt;
+   &lt;table width='600' align='center' cellpadding='0' cellspacing='0'&gt;
+      &lt;tr align='center'&gt;
+         &lt;td style='padding: 14px'&gt;
+            &lt;img src='https://foodway-public-s3.s3.amazonaws.com/website-images/foodway-logo.png' width='50'
+               alt='Foodway' /&gt;
+         &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr align='center'&gt;
+         &lt;td cellspacing='0'&gt;
+            &lt;table width='600' style='background-color: #ED0000; padding: 8px; border-radius: 16px 16px 0 0;'&gt;
+               &lt;tr&gt;
+                  &lt;td&gt; &lt;/td&gt;
+               &lt;/tr&gt;
+            &lt;/table&gt;
+            &lt;table width='600' style='background-color: #ffffff; padding: 16px; border-radius: 0 0 16px 16px;'&gt;
+               &lt;tr&gt;
+                  &lt;td&gt;
+                     &lt;p style='font-weight: bold'&gt; Seja Bem-Vindo à Foodway! 🥳✨&lt;/p&gt;
+                     &lt;p&gt;Olá, ${name}! 🌟&lt;/p&gt;
+                     &lt;p&gt;É com imensa alegria que te damos as boas-vindas como nosso parceiro! 🎉 &lt;/p&gt;
+                     &lt;p&gt;
+                        Seu estabelecimento ${establishmentName} foi cadastrado com sucesso em nossa plataforma, e estamos entusiasmados em
+                        tê-lo como parte da nossa comunidade culinária.
+                     &lt;/p&gt;
+                     &lt;p&gt;
+                        Prepare-se para alcançar novos clientes e expandir seus horizontes.
+                     &lt;/p&gt;
+                     &lt;p&gt;Bem-vindo à família Foodway! 🍽️💫&lt;/p&gt;
+                  &lt;/td&gt;
+               &lt;/tr&gt;
+            &lt;/table&gt;
+         &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr align='center'&gt;
+         &lt;td style='padding: 14px 0px 0px 0px'&gt; &lt;img
+               src='https://foodway-public-s3.s3.amazonaws.com/website-images/foodway-logo.png' width='50'
+               alt='Foodway' /&gt;
+         &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr align='center'&gt;
+         &lt;td&gt;
+            &lt;p&gt; Foodway&lt;br&gt; Rua Haddock Lobo, 595 - Cerqueira César, São Paulo - SP, 01414-001&lt;/p&gt;
+         &lt;/td&gt;
+      &lt;/tr&gt;
+   &lt;/table&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</value>
+                            </entry>
+                            <entry>
+<key>Text to Prepend</key>
+                            </entry>
+                            <entry>
+<key>Text to Append</key>
+                            </entry>
+                            <entry>
+<key>Character Set</key>
+<value>UTF-8</value>
+                            </entry>
+                            <entry>
+<key>Maximum Buffer Size</key>
+<value>1 MB</value>
+                            </entry>
+                            <entry>
+<key>Evaluation Mode</key>
+<value>Entire text</value>
+                            </entry>
+                            <entry>
+<key>Line-by-Line Evaluation Mode</key>
+<value>All</value>
+                            </entry>
+                        </properties>
+                        <retryCount>10</retryCount>
+                        <runDurationMillis>25</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <executionNodeRestricted>false</executionNodeRestricted>
+                    <name>email establishment</name>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>failure</name>
+                        <retry>false</retry>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                        <retry>false</retry>
+                    </relationships>
+                    <state>RUNNING</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.ReplaceText</type>
+                </processors>
+                <processors>
+                    <id>ede69166-67a2-3c57-0000-000000000000</id>
+                    <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>56.0</x>
+                        <y>1200.0</y>
+                    </position>
+                    <versionedComponentId>ede69166-67a2-3c57-b04d-5f947ce8c43f</versionedComponentId>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.25.0</version>
+                    </bundle>
+                    <config>
+                        <backoffMechanism>PENALIZE_FLOWFILE</backoffMechanism>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>HTTP Status Code</key>
+<value>
+    <name>HTTP Status Code</name>
+</value>
+                            </entry>
+                            <entry>
+<key>HTTP Context Map</key>
+<value>
+    <identifiesControllerService>org.apache.nifi.http.HttpContextMap</identifiesControllerService>
+    <name>HTTP Context Map</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Attributes to add to the HTTP Response (Regex)</key>
+<value>
+    <name>Attributes to add to the HTTP Response (Regex)</name>
+</value>
+                            </entry>
+                            <entry>
+<key>content-type</key>
+<value>
+    <name>content-type</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <maxBackoffPeriod>10 mins</maxBackoffPeriod>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>HTTP Status Code</key>
+<value>200</value>
+                            </entry>
+                            <entry>
+<key>HTTP Context Map</key>
+<value>f1ea51b0-0cca-3206-0000-000000000000</value>
+                            </entry>
+                            <entry>
+<key>Attributes to add to the HTTP Response (Regex)</key>
+                            </entry>
+                            <entry>
+<key>content-type</key>
+<value>application/json</value>
+                            </entry>
+                        </properties>
+                        <retryCount>10</retryCount>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <executionNodeRestricted>false</executionNodeRestricted>
+                    <name>HandleHttpResponse</name>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>failure</name>
+                        <retry>false</retry>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>success</name>
+                        <retry>false</retry>
+                    </relationships>
+                    <state>RUNNING</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.HandleHttpResponse</type>
+                </processors>
+                <processors>
+                    <id>f84251c3-7ecc-3581-0000-000000000000</id>
+                    <parentGroupId>326cfbe5-5145-3753-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>56.0</x>
+                        <y>1000.0</y>
                     </position>
                     <versionedComponentId>878a8a25-db57-3737-a599-9a3e642b4da4</versionedComponentId>
                     <bundle>
@@ -2116,6 +3733,7 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
             <defaultFlowFileExpiration>0 sec</defaultFlowFileExpiration>
             <flowfileConcurrency>UNBOUNDED</flowfileConcurrency>
             <flowfileOutboundPolicy>STREAM_WHEN_AVAILABLE</flowfileOutboundPolicy>
+            <logFileSuffix></logFileSuffix>
             <name>account created</name>
             <variables/>
         </processGroups>
@@ -2124,7 +3742,7 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
             <parentGroupId>f63adb24-d705-3b80-0000-000000000000</parentGroupId>
             <position>
                 <x>0.0</x>
-                <y>616.5743478677939</y>
+                <y>536.5743478677939</y>
             </position>
             <versionedComponentId>a000ee85-ac26-3f47-8b9f-73ae14b38f9e</versionedComponentId>
             <comments></comments>
@@ -2185,6 +3803,33 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
                     <zIndex>0</zIndex>
                 </connections>
                 <connections>
+                    <id>497f3dd0-12a3-3e5a-0000-000000000000</id>
+                    <parentGroupId>a000ee85-ac26-3f47-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>a000ee85-ac26-3f47-0000-000000000000</groupId>
+                        <id>fea2cf97-200b-3924-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                        <versionedComponentId>fea2cf97-200b-3924-a512-d3ddb4bca8f4</versionedComponentId>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                    <name></name>
+                    <selectedRelationships>success</selectedRelationships>
+                    <source>
+                        <groupId>a000ee85-ac26-3f47-0000-000000000000</groupId>
+                        <id>6de7d173-a926-3a13-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                        <versionedComponentId>01925796-ae20-30c5-8c84-3dce5993816e</versionedComponentId>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
                     <id>61f316be-14a0-3ed0-0000-000000000000</id>
                     <parentGroupId>a000ee85-ac26-3f47-0000-000000000000</parentGroupId>
                     <versionedComponentId>61f316be-14a0-3ed0-bce2-85f585499004</versionedComponentId>
@@ -2213,36 +3858,9 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
                     <zIndex>0</zIndex>
                 </connections>
                 <connections>
-                    <id>8112dcbb-d023-378d-0000-000000000000</id>
-                    <parentGroupId>a000ee85-ac26-3f47-0000-000000000000</parentGroupId>
-                    <versionedComponentId>e9fd2ec1-2617-359a-bf14-452fb741c2e9</versionedComponentId>
-                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
-                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
-                    <destination>
-                        <groupId>a000ee85-ac26-3f47-0000-000000000000</groupId>
-                        <id>aee29129-fc8d-36a8-0000-000000000000</id>
-                        <type>PROCESSOR</type>
-                        <versionedComponentId>878a8a25-db57-3737-a599-9a3e642b4da4</versionedComponentId>
-                    </destination>
-                    <flowFileExpiration>0 sec</flowFileExpiration>
-                    <labelIndex>1</labelIndex>
-                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
-                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
-                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
-                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
-                    <name></name>
-                    <selectedRelationships>success</selectedRelationships>
-                    <source>
-                        <groupId>a000ee85-ac26-3f47-0000-000000000000</groupId>
-                        <id>6de7d173-a926-3a13-0000-000000000000</id>
-                        <type>PROCESSOR</type>
-                        <versionedComponentId>01925796-ae20-30c5-8c84-3dce5993816e</versionedComponentId>
-                    </source>
-                    <zIndex>0</zIndex>
-                </connections>
-                <connections>
                     <id>c817c040-f064-3c7f-0000-000000000000</id>
                     <parentGroupId>a000ee85-ac26-3f47-0000-000000000000</parentGroupId>
+                    <versionedComponentId>c817c040-f064-3c7f-bd07-a33411923781</versionedComponentId>
                     <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
                     <backPressureObjectThreshold>10000</backPressureObjectThreshold>
                     <destination>
@@ -2264,34 +3882,6 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
                         <id>e22cd2d2-c6fa-3760-0000-000000000000</id>
                         <type>PROCESSOR</type>
                         <versionedComponentId>46b93616-08f9-3c45-a3c7-b967e0e7e71b</versionedComponentId>
-                    </source>
-                    <zIndex>0</zIndex>
-                </connections>
-                <connections>
-                    <id>eb7653a1-41df-395d-0000-000000000000</id>
-                    <parentGroupId>a000ee85-ac26-3f47-0000-000000000000</parentGroupId>
-                    <versionedComponentId>eb7653a1-41df-395d-a5ed-41042393d129</versionedComponentId>
-                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
-                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
-                    <destination>
-                        <groupId>a000ee85-ac26-3f47-0000-000000000000</groupId>
-                        <id>fea2cf97-200b-3924-0000-000000000000</id>
-                        <type>PROCESSOR</type>
-                        <versionedComponentId>fea2cf97-200b-3924-a512-d3ddb4bca8f4</versionedComponentId>
-                    </destination>
-                    <flowFileExpiration>0 sec</flowFileExpiration>
-                    <labelIndex>1</labelIndex>
-                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
-                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
-                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
-                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
-                    <name></name>
-                    <selectedRelationships>success</selectedRelationships>
-                    <source>
-                        <groupId>a000ee85-ac26-3f47-0000-000000000000</groupId>
-                        <id>aee29129-fc8d-36a8-0000-000000000000</id>
-                        <type>PROCESSOR</type>
-                        <versionedComponentId>878a8a25-db57-3737-a599-9a3e642b4da4</versionedComponentId>
                     </source>
                     <zIndex>0</zIndex>
                 </connections>
@@ -2519,7 +4109,7 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
                             </entry>
                             <entry>
 <key>SMTP Username</key>
-<value>marcelinhoalcantaracruz@gmail.com</value>
+<value>#{smtp.user}</value>
                             </entry>
                             <entry>
 <key>SMTP Password</key>
@@ -2549,7 +4139,7 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
                             </entry>
                             <entry>
 <key>From</key>
-<value>${complainantEmail}</value>
+<value>#{smtp.user}</value>
                             </entry>
                             <entry>
 <key>To</key>
@@ -2563,7 +4153,7 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
                             </entry>
                             <entry>
 <key>Subject</key>
-<value>Sua conta FoodWay foi criada</value>
+<value>Recebemos sua denúncia!</value>
                             </entry>
                             <entry>
 <key>Message</key>
@@ -2597,14 +4187,12 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
             &lt;table width='600' style='background-color: #ffffff; padding: 16px; border-radius: 0 0 16px 16px;'&gt;
                &lt;tr&gt;
                   &lt;td&gt;
-                     &lt;p style='font-weight: bold'&gt; Seja Bem-Vindo à Foodway! 🥳✨
-                     &lt;/p&gt;
-                     &lt;p style='display: flex; align-items: center; flex-direction: row;'&gt; &lt;span
-                           style="font-size:1.5rem"&gt;🎊&lt;/span&gt; Olá, ${name}! 🌟 &lt;/p&gt;
-                     &lt;p&gt; Foi reportado! 🎉 &lt;/p&gt;
-                     &lt;p&gt;
-                        Bem-vindo à família Foodway! 🍽️💫
-                     &lt;/p&gt;
+                     &lt;p style='font-weight: bold'&gt; Recebemos sua denúncia!&lt;/p&gt;
+                     &lt;p&gt;Olá, ${ownerName}!&lt;/p&gt;
+                     &lt;p&gt;Recebemos sua denúncia sobre o estabelecimento ${establishmentName}.&lt;/p&gt;
+                     &lt;p&gt;Iremos analizar o caso e retornaremos assim que possível.&lt;/p&gt;
+                     &lt;p&gt;&lt;strong&gt;Sua denúncia:&lt;/strong&gt; ${emailMessage}&lt;/p&gt;
+                     &lt;p&gt;Foodway. O caminho para a escolha perfeita! 🍽️💫&lt;/p&gt;
                   &lt;/td&gt;
                &lt;/tr&gt;
             &lt;/table&gt;
@@ -2847,7 +4435,7 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
                             </entry>
                             <entry>
 <key>SMTP Username</key>
-<value>marcelinhoalcantaracruz@gmail.com</value>
+<value>#{smtp.user}</value>
                             </entry>
                             <entry>
 <key>SMTP Password</key>
@@ -2877,7 +4465,7 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
                             </entry>
                             <entry>
 <key>From</key>
-<value>${complainantEmail}</value>
+<value>#{smtp.user}</value>
                             </entry>
                             <entry>
 <key>To</key>
@@ -2925,17 +4513,11 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
             &lt;table width='600' style='background-color: #ffffff; padding: 16px; border-radius: 0 0 16px 16px;'&gt;
                &lt;tr&gt;
                   &lt;td&gt;
-                     &lt;p style='font-weight: bold'&gt; Seu estabelecimento recebeu uma denúncia!
-                     &lt;/p&gt;
-                     &lt;p style='display: flex; align-items: center; flex-direction: row;'&gt; &lt;span
-                           style="font-size:1.5rem"&gt;&lt;/span&gt; Olá, ${ownerName}!&lt;/p&gt;
-                     &lt;p&gt; Seu estabelecimento ${establishmentName} recebeu uma denúncia!&lt;/p&gt;
-                     &lt;p&gt; 
-                        &lt;strong&gt;Descrição:&lt;/strong&gt; ${emailMessage}
-                     &lt;/p&gt;
-                     &lt;p&gt;
-                        O caminho para a escolha perfeita! 🍽️💫
-                     &lt;/p&gt;
+                     &lt;p style='font-weight: bold'&gt; Seu estabelecimento recebeu uma denúncia!&lt;/p&gt;
+                     &lt;p&gt;Olá, ${ownerName}!&lt;/p&gt;
+                     &lt;p&gt;Seu estabelecimento ${establishmentName} recebeu uma denúncia!&lt;/p&gt;
+                     &lt;p&gt;&lt;strong&gt;Descrição:&lt;/strong&gt; ${emailMessage}&lt;/p&gt;
+                     &lt;p&gt;O caminho para a escolha perfeita! 🍽️💫&lt;/p&gt;
                   &lt;/td&gt;
                &lt;/tr&gt;
             &lt;/table&gt;
@@ -3164,8 +4746,8 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
                     <id>aee29129-fc8d-36a8-0000-000000000000</id>
                     <parentGroupId>a000ee85-ac26-3f47-0000-000000000000</parentGroupId>
                     <position>
-                        <x>32.0</x>
-                        <y>536.0</y>
+                        <x>544.0</x>
+                        <y>416.0</y>
                     </position>
                     <versionedComponentId>878a8a25-db57-3737-a599-9a3e642b4da4</versionedComponentId>
                     <bundle>
@@ -3318,7 +4900,7 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
                         <name>success</name>
                         <retry>false</retry>
                     </relationships>
-                    <state>RUNNING</state>
+                    <state>DISABLED</state>
                     <style/>
                     <type>org.apache.nifi.processors.standard.ReplaceText</type>
                 </processors>
@@ -3611,8 +5193,8 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
                     <id>fea2cf97-200b-3924-0000-000000000000</id>
                     <parentGroupId>a000ee85-ac26-3f47-0000-000000000000</parentGroupId>
                     <position>
-                        <x>280.0</x>
-                        <y>784.0</y>
+                        <x>32.0</x>
+                        <y>528.0</y>
                     </position>
                     <versionedComponentId>fea2cf97-200b-3924-a512-d3ddb4bca8f4</versionedComponentId>
                     <bundle>
@@ -3709,7 +5291,7 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
             <id>070a4aeb-eda8-30e4-0000-000000000000</id>
             <parentGroupId>f63adb24-d705-3b80-0000-000000000000</parentGroupId>
             <position>
-                <x>1581.5427547354607</x>
+                <x>1733.5427547354607</x>
                 <y>264.0</y>
             </position>
             <versionedComponentId>070a4aeb-eda8-30e4-8f15-29a60b92eab0</versionedComponentId>
@@ -3797,7 +5379,7 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
             <id>28a38e8e-e185-37a7-0000-000000000000</id>
             <parentGroupId>f63adb24-d705-3b80-0000-000000000000</parentGroupId>
             <position>
-                <x>357.5427547354607</x>
+                <x>509.5427547354607</x>
                 <y>272.0</y>
             </position>
             <versionedComponentId>28a38e8e-e185-37a7-8636-4470387fcb26</versionedComponentId>
@@ -3873,7 +5455,7 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
                 <retry>false</retry>
             </relationships>
             <relationships>
-                <autoTerminate>true</autoTerminate>
+                <autoTerminate>false</autoTerminate>
                 <name>isAccountUpdated</name>
                 <retry>false</retry>
             </relationships>
@@ -3895,7 +5477,7 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
             <id>b1cf4860-265e-34bd-0000-000000000000</id>
             <parentGroupId>f63adb24-d705-3b80-0000-000000000000</parentGroupId>
             <position>
-                <x>965.5427547354607</x>
+                <x>1117.5427547354607</x>
                 <y>272.0</y>
             </position>
             <versionedComponentId>b1cf4860-265e-34bd-be7f-a5962402e457</versionedComponentId>
@@ -4054,7 +5636,7 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
             <id>e15a2f9b-73f3-3af3-0000-000000000000</id>
             <parentGroupId>f63adb24-d705-3b80-0000-000000000000</parentGroupId>
             <position>
-                <x>357.5427547354607</x>
+                <x>509.5427547354607</x>
                 <y>0.0</y>
             </position>
             <versionedComponentId>e15a2f9b-73f3-3af3-a396-097bca8d0ae3</versionedComponentId>
@@ -4294,5 +5876,5 @@ Sua conta FoodWay acabou de ser criada com sucesso!</value>
             <type>org.apache.nifi.processors.standard.HandleHttpRequest</type>
         </processors>
     </snippet>
-    <timestamp>03/18/2024 22:05:13 BRT</timestamp>
+    <timestamp>03/23/2024 21:45:23 BRT</timestamp>
 </template>
