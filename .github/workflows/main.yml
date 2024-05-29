@@ -1,0 +1,112 @@
+name: CI/CD for Apache NiFi
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Copy Template.xml to EC2
+        uses: appleboy/scp-action@v0.1.3
+        with:
+          source: ./src/Template.xml
+          target: ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST_NIFI }}:/PATH/TO/NIFI/Template.xml
+          key: ${{ secrets.SERVER_SSH_KEY }}
+
+      - name: Check if NiFi instance is up
+        run: |
+          if curl -f -s http://${{ secrets.SERVER_HOST_NIFI }}:8080/nifi; then
+            echo "NiFi is up "
+          else
+            echo "NiFi is down"
+            exit 1
+          fi
+
+      - name: Initialize NiFi with Docker Compose
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SERVER_HOST_NIFI }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          script: |
+            cd /path/to/nifi/compose
+            docker-compose up -d
+
+      # - name: Perform NiFi Login
+      #   env:
+      #     NIFI_USERNAME: ${{ secrets.NIFI_USERNAME }}
+      #     NIFI_PASSWORD: ${{ secrets.NIFI_PASSWORD }}
+      #   run: |
+      #     curl -X POST -c cookies.txt -d "username=${{ secrets.NIFI_USERNAME }}" -d "password=${{ secrets.NIFI_PASSWORD }}" http://${{ secrets.SERVER_HOST_NIFI }}:8443/nifi-api/access/token
+
+      - name: Create Parameter Context in NiFi
+        run: |
+          curl --request POST \
+            --url http://${{ secrets.SERVER_HOST_NIFI }}:8443/nifi-api/parameter-contexts \
+            --header 'Content-Type: application/json' \
+            --data '{
+              "revision": {
+                "version": 0
+              },
+              "component": {
+                "id": "b2a54d17-381e-4ba0-9529-3e6e2fc72165",
+                "name": "prod2",
+                "parameters": [
+                  {
+                    "parameter": {
+                      "name": "smtp.user",
+                      "value": "foodway.staff@gmail.com",
+                      "sensitive": false
+                    },
+                    "revision": {
+                      "version": 0
+                    }
+                  },
+                  {
+                    "parameter": {
+                      "name": "smtp.pass",
+                      "value": "gher tyvq qxwj gxia",
+                      "sensitive": true
+                    },
+                    "revision": {
+                      "version": 0
+                    }
+                  },
+                  {
+                    "parameter": {
+                      "name": "amqp.user",
+                      "value": "foodway",
+                      "sensitive": false
+                    },
+                    "revision": {
+                      "version": 0
+                    }
+                  },
+                  {
+                    "parameter": {
+                      "name": "amqp.pass",
+                      "value": "GfFoodway",
+                      "sensitive": true
+                    },
+                    "revision": {
+                      "version": 0
+                    }
+                  },
+                  {
+                    "parameter": {
+                      "name": "amqp.ip",
+                      "value": "192.168.15.155",
+                      "sensitive": false
+                    },
+                    "revision": {
+                      "version": 0
+                    }
+                  }
+                ]
+              }
+            }'
