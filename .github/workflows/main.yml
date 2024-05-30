@@ -11,13 +11,25 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Copy Template.xml to EC2
+      - name: Copy Template.xml to Bastion Host
         uses: appleboy/scp-action@v0.1.3
         with:
           source: ./SMTP_template.xml
-          target: ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST_NIFI }}:/home/ubuntu/NIFI/Template.xml
-          key: ${{ secrets.SERVER_SSH_KEY }}
+          target: ${{ secrets.BASTION_USER }}@${{ secrets.BASTION_HOST }}:/home/ubuntu/Template.xml
+          key: ${{ secrets.BASTION_SSH_KEY }}
           port: 22
+
+      - name: Copy Template.xml from Bastion Host to Private EC2
+        uses: appleboy/scp-action@v0.1.3
+        with:
+          source: /home/ubuntu/Template.xml
+          target: ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST_NIFI }}:/home/ubuntu/NIFI/Template.xml
+          key: ${{ secrets.BASTION_SSH_KEY }}
+          port: 22
+          bastion_host: ${{ secrets.BASTION_HOST }}
+          bastion_user: ${{ secrets.BASTION_USER }}
+          bastion_key: ${{ secrets.BASTION_SSH_KEY }}
+          bastion_port: 22
 
       - name: Check if NiFi instance is up
         run: |
