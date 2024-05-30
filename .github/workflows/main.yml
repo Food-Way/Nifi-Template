@@ -15,7 +15,7 @@ jobs:
         uses: appleboy/scp-action@v0.1.3
         with:
           source: ./src/Template.xml
-          target: ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST_NIFI }}:/PATH/TO/NIFI/Template.xml
+          target: ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST_NIFI }}:/home/ubuntu/NIFI/Template.xml
           key: ${{ secrets.SERVER_SSH_KEY }}
 
       - name: Check if NiFi instance is up
