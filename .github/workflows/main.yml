@@ -1,4 +1,4 @@
-name: CI/CD for Apache NiFi - Foodway
+name: CI/CD for Apache NiFi
 
 on:
   push:
