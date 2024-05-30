@@ -1,4 +1,4 @@
-name: CI/CD for Apache NiFi - Foodway
+name: CI/CD for Apache NiFi
 
 on:
   push:
@@ -14,7 +14,7 @@ jobs:
       - name: Copy Template.xml to EC2
         uses: appleboy/scp-action@v0.1.3
         with:
-          source: ./src/Template.xml
+          source: ./src/SMTP_template.xml
           target: ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST_NIFI }}:/home/ubuntu/NIFI/Template.xml
           key: ${{ secrets.SERVER_SSH_KEY }}
 
