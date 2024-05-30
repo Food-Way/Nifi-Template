@@ -17,11 +17,12 @@ jobs:
           source: ./SMTP_template.xml
           target: ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST_NIFI }}:/home/ubuntu/NIFI/Template.xml
           key: ${{ secrets.SERVER_SSH_KEY }}
+          port: 22
 
       - name: Check if NiFi instance is up
         run: |
           if curl -f -s http://${{ secrets.SERVER_HOST_NIFI }}:8080/nifi; then
-            echo "NiFi is up "
+            echo "NiFi is up"
           else
             echo "NiFi is down"
             exit 1
@@ -33,16 +34,10 @@ jobs:
           host: ${{ secrets.SERVER_HOST_NIFI }}
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
+          port: 22
           script: |
             cd /path/to/nifi/compose
             docker-compose up -d
-
-      # - name: Perform NiFi Login
-      #   env:
-      #     NIFI_USERNAME: ${{ secrets.NIFI_USERNAME }}
-      #     NIFI_PASSWORD: ${{ secrets.NIFI_PASSWORD }}
-      #   run: |
-      #     curl -X POST -c cookies.txt -d "username=${{ secrets.NIFI_USERNAME }}" -d "password=${{ secrets.NIFI_PASSWORD }}" http://${{ secrets.SERVER_HOST_NIFI }}:8443/nifi-api/access/token
 
       - name: Create Parameter Context in NiFi
         run: |
