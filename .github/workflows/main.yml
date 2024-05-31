@@ -31,7 +31,7 @@ jobs:
                 -i /home/ubuntu/.ssh/ssh_key.pem \
                 -t ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST_NIFI }} << 'EOF'
             # Check if the container is running and remove it if it is
-            if [ "$(sudo docker ps -q -f name=nifi-foodway)" ]; then
+            if [ "$(sudo docker ps -a -q -f name=nifi-foodway)" ]; then
                 sudo docker rm -f nifi-foodway
             fi
             # Pull the latest image and run the container
