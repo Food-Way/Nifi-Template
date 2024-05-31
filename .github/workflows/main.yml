@@ -29,9 +29,15 @@ jobs:
           script: |
             ssh -o StrictHostKeyChecking=no \
                 -i /home/ubuntu/.ssh/ssh_key.pem \
-                ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST_NIFI }} \
-                "sudo docker rm -f nifi-foodway" \
-                "sudo docker pull ${{ secrets.FOODWAY_USER_DOCKERHUB }}/nifi-foodway:latest && sudo docker run -d -p 8080:8080 -p 8443:8443 --name nifi-foodway ${{ secrets.FOODWAY_USER_DOCKERHUB }}/nifi-foodway:latest"
+                ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST_NIFI }} << 'EOF'
+            # Check if the container is running and remove it if it is
+            if [ "$(sudo docker ps -q -f name=nifi-foodway)" ]; then
+                sudo docker rm -f nifi-foodway
+            fi
+            # Pull the latest image and run the container
+            sudo docker pull "${{ secrets.FOODWAY_USER_DOCKERHUB }}/nifi-foodway:latest"
+            sudo docker run -d -p 8080:8080 -p 8443:8443 --name nifi-foodway "${{ secrets.FOODWAY_USER_DOCKERHUB }}/nifi-foodway:latest"
+            EOF
 
       - name: Check if NiFi instance is up
         run: |
