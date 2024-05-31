@@ -52,7 +52,7 @@ jobs:
           sudo ssh -o StrictHostKeyChecking=no \
               -i /home/ubuntu/.ssh/ssh_key.pem \
               -J ${{ secrets.BASTION_USER }}@${{ secrets.BASTION_HOST }} \
-              -t ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST_NIFI }} << 'EOF'
+              -tt ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST_NIFI }} << 'EOF'
           sudo curl --request POST \
           --url http://${{ secrets.SERVER_HOST_NIFI }}:8443/nifi-api/parameter-contexts \
           --header 'Content-Type: application/json' \
