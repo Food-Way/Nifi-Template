@@ -56,8 +56,72 @@ jobs:
           script: |
             ssh -o StrictHostKeyChecking=no \
                 -i /home/ubuntu/.ssh/ssh_key.pem \
-                -t ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST_NIFI }} \
-                "ls"
+                -t ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST_NIFI }} << 'EOF'
+            sudo curl --request POST \
+                      --url http://${{ secrets.SERVER_HOST_NIFI }}:8443/nifi-api/parameter-contexts \
+                      --header 'Content-Type: application/json' \
+                      --data '{
+                        "revision": {
+                          "version": 0
+                        },
+                        "component": {
+                          "id": "b2a54d17-381e-4ba0-9529-3e6e2fc72165",
+                          "name": "prod2",
+                          "parameters": [
+                            {
+                              "parameter": {
+                                "name": "smtp.user",
+                                "value": "foodway.staff@gmail.com",
+                                "sensitive": false
+                              },
+                              "revision": {
+                                "version": 0
+                              }
+                            },
+                            {
+                              "parameter": {
+                                "name": "smtp.pass",
+                                "value": "gher tyvq qxwj gxia",
+                                "sensitive": true
+                              },
+                              "revision": {
+                                "version": 0
+                              }
+                            },
+                            {
+                              "parameter": {
+                                "name": "amqp.user",
+                                "value": "foodway",
+                                "sensitive": false
+                              },
+                              "revision": {
+                                "version": 0
+                              }
+                            },
+                            {
+                              "parameter": {
+                                "name": "amqp.pass",
+                                "value": "GfFoodway",
+                                "sensitive": true
+                              },
+                              "revision": {
+                                "version": 0
+                              }
+                            },
+                            {
+                              "parameter": {
+                                "name": "amqp.ip",
+                                "value": "192.168.15.155",
+                                "sensitive": false
+                              },
+                              "revision": {
+                                "version": 0
+                              }
+                            }
+                          ]
+                        }
+                      }'
+            EOF
 
       
 
