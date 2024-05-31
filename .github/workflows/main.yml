@@ -16,9 +16,9 @@ jobs:
 
       - name: Push Docker Image
         run: |
-          echo ${{ secrets.FOODWAY_PASSWORD_DOCKERHUB }} | docker login -u ${{ secrets.FOODWAY_USER_DOCKERHUB }} --password-stdin
-          docker tag nifi-foodway:latest ${{ secrets.FOODWAY_USER_DOCKERHUB }}/nifi-foodway:latest
-          docker push ${{ secrets.FOODWAY_USER_DOCKERHUB }}/nifi-foodway:latest
+          echo "${{ secrets.FOODWAY_PASSWORD_DOCKERHUB }}" | docker login -u "${{ secrets.FOODWAY_USER_DOCKERHUB }}" --password-stdin
+          docker tag nifi-foodway:latest "${{ secrets.FOODWAY_USER_DOCKERHUB }}"/nifi-foodway:latest
+          docker push "${{ secrets.FOODWAY_USER_DOCKERHUB }}"/nifi-foodway:latest
 
       - name: Deploy NiFi on EC2 via Bastion Host
         uses: appleboy/ssh-action@v1.0.3
