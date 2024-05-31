@@ -29,7 +29,7 @@ jobs:
           script: |
             ssh -o StrictHostKeyChecking=no \
                 -i /home/ubuntu/.ssh/ssh_key.pem \
-                ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST_NIFI }} << 'EOF'
+                -t ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST_NIFI }} << 'EOF'
             # Check if the container is running and remove it if it is
             if [ "$(sudo docker ps -q -f name=nifi-foodway)" ]; then
                 sudo docker rm -f nifi-foodway
@@ -52,7 +52,7 @@ jobs:
             sudo ssh -o StrictHostKeyChecking=no \
                 -i /home/ubuntu/.ssh/ssh_key.pem \
                 -t ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST_NIFI }} << 'EOF'
-            sudo curl --request POST \
+            curl --request POST \
             --url http://${{ secrets.SERVER_HOST_NIFI }}:8443/nifi-api/parameter-contexts \
             --header 'Content-Type: application/json' \
             --data '{
