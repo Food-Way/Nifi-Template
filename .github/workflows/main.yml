@@ -11,25 +11,26 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Copy Template.xml to Bastion Host
-        uses: appleboy/scp-action@v0.1.3
-        with:
-          source: SMTP_template.xml
-          target: ${{ secrets.BASTION_USER }}@${{ secrets.BASTION_HOST }}:/home/ubuntu/Template.xml
-          key: ${{ secrets.BASTION_SSH_KEY }}
-          port: 22
+      - name: Build Docker Image
+        run: docker build -t nifi-foodway:latest .
 
-      - name: Copy Template.xml from Bastion Host to Private EC2
-        uses: appleboy/scp-action@v0.1.3
+      - name: Push Docker Image
+        run: |
+          echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+          docker tag nifi-foodway:latest foodway/nifi-foodway:latest
+          docker push foodway/nifi-foodway:latest
+
+      - name: Deploy NiFi on EC2 via Bastion Host
+        uses: appleboy/ssh-action@v1.0.3
         with:
-          source: /home/ubuntu/Template.xml
-          target: ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST_NIFI }}:/home/ubuntu/NIFI/Template.xml
+          host: ${{ secrets.BASTION_HOST }}
+          username: ${{ secrets.BASTION_USER }}
           key: ${{ secrets.BASTION_SSH_KEY }}
-          port: 22
-          bastion_host: ${{ secrets.BASTION_HOST }}
-          bastion_user: ${{ secrets.BASTION_USER }}
-          bastion_key: ${{ secrets.BASTION_SSH_KEY }}
-          bastion_port: 22
+          script: |
+            ssh -o StrictHostKeyChecking=no \
+                -i /home/ubuntu/.ssh/ssh_key.pem \
+                -t ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST_NIFI }} \
+                "docker pull your-docker-repo/custom-nifi:latest && docker run -d -p 8080:8080 -p 8443:8443 --name custom-nifi your-docker-repo/custom-nifi:latest"
 
       - name: Check if NiFi instance is up
         run: |
@@ -39,17 +40,6 @@ jobs:
             echo "NiFi is down"
             exit 1
           fi
-
-      - name: Initialize NiFi with Docker Compose
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.SERVER_HOST_NIFI }}
-          username: ${{ secrets.SERVER_USER }}
-          key: ${{ secrets.SERVER_SSH_KEY }}
-          port: 22
-          script: |
-            cd /path/to/nifi/compose
-            docker-compose up -d
 
       - name: Create Parameter Context in NiFi
         run: |
