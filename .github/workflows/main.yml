@@ -50,9 +50,9 @@ jobs:
       - name: Create Parameter Context in NiFi
         run: |
             sudo ssh -o StrictHostKeyChecking=no \
-                -i /home/${{ secrets.SERVER_USER }}/.ssh/authorized_keys \
+                -i /home/${{ secrets.SERVER_USER }}/.ssh/ssh_key.pem \
                 -t ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST_NIFI }} << 'EOF'
-            curl --request POST \
+            sudo curl --request POST \
             --url http://${{ secrets.SERVER_HOST_NIFI }}:8443/nifi-api/parameter-contexts \
             --header 'Content-Type: application/json' \
             --data '{
