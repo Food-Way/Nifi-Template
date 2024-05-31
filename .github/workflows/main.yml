@@ -47,75 +47,96 @@ jobs:
             echo "NiFi is down"
           fi
 
+      - name: Ensure SSH Key is Present
+        run: |
+          # Verifique se o diretório .ssh existe
+          if [ ! -d /home/ubuntu/.ssh ]; then
+            mkdir -p /home/ubuntu/.ssh
+          fi
+
+          # Verifique se a chave SSH existe e é acessível
+          if [ ! -f /home/ubuntu/.ssh/ssh_key.pem ]; then
+            echo "Chave SSH não encontrada: /home/ubuntu/.ssh/ssh_key.pem"
+            exit 1
+          fi
+
+          # Ajuste as permissões da chave SSH
+          chmod 600 /home/ubuntu/.ssh/ssh_key.pem
+
+      - name: Add Bastion Host to known_hosts
+        run: |
+          ssh-keyscan -H ${{ secrets.BASTION_HOST }} >> ~/.ssh/known_hosts
+
       - name: Create Parameter Context in NiFi
         run: |
           sudo ssh -o StrictHostKeyChecking=no \
-              -i /home/ubuntu/.ssh/ssh_key.pem \
-              -J ${{ secrets.BASTION_USER }}@${{ secrets.BASTION_HOST }} \
-              -tt ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST_NIFI }} << 'EOF'
+                  -i /home/ubuntu/.ssh/ssh_key.pem \
+                  -tt -J ${{ secrets.BASTION_USER }}@${{ secrets.BASTION_HOST }} \
+                  ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST_NIFI }} << 'EOF'
           sudo curl --request POST \
-          --url http://${{ secrets.SERVER_HOST_NIFI }}:8443/nifi-api/parameter-contexts \
-          --header 'Content-Type: application/json' \
-          --data '{
-            "revision": {
-              "version": 0
-            },
-            "component": {
-              "id": "b2a54d17-381e-4ba0-9529-3e6e2fc72165",
-              "name": "prod2",
-              "parameters": [
-                {
-                  "parameter": {
-                    "name": "smtp.user",
-                    "value": "foodway.staff@gmail.com",
-                    "sensitive": false
-                  },
-                  "revision": {
-                    "version": 0
-                  }
-                },
-                {
-                  "parameter": {
-                    "name": "smtp.pass",
-                    "value": "gher tyvq qxwj gxia",
-                    "sensitive": true
-                  },
-                  "revision": {
-                    "version": 0
-                  }
-                },
-                {
-                  "parameter": {
-                    "name": "amqp.user",
-                    "value": "foodway",
-                    "sensitive": false
-                  },
-                  "revision": {
-                    "version": 0
-                  }
-                },
-                {
-                  "parameter": {
-                    "name": "amqp.pass",
-                    "value": "GfFoodway",
-                    "sensitive": true
-                  },
-                  "revision": {
-                    "version": 0
-                  }
-                },
-                {
-                  "parameter": {
-                    "name": "amqp.ip",
-                    "value": "192.168.15.155",
-                    "sensitive": false
-                  },
-                  "revision": {
-                    "version": 0
-                  }
-                }
-              ]
-            }
-          }'
+                    --url http://${{ secrets.SERVER_HOST_NIFI }}:8443/nifi-api/parameter-contexts \
+                    --header 'Content-Type: application/json' \
+                    --data '{
+                      "revision": {
+                        "version": 0
+                      },
+                      "component": {
+                        "id": "b2a54d17-381e-4ba0-9529-3e6e2fc72165",
+                        "name": "prod2",
+                        "parameters": [
+                          {
+                            "parameter": {
+                              "name": "smtp.user",
+                              "value": "foodway.staff@gmail.com",
+                              "sensitive": false
+                            },
+                            "revision": {
+                              "version": 0
+                            }
+                          },
+                          {
+                            "parameter": {
+                              "name": "smtp.pass",
+                              "value": "gher tyvq qxwj gxia",
+                              "sensitive": true
+                            },
+                            "revision": {
+                              "version": 0
+                            }
+                          },
+                          {
+                            "parameter": {
+                              "name": "amqp.user",
+                              "value": "foodway",
+                              "sensitive": false
+                            },
+                            "revision": {
+                              "version": 0
+                            }
+                          },
+                          {
+                            "parameter": {
+                              "name": "amqp.pass",
+                              "value": "GfFoodway",
+                              "sensitive": true
+                            },
+                            "revision": {
+                              "version": 0
+                            }
+                          },
+                          {
+                            "parameter": {
+                              "name": "amqp.ip",
+                              "value": "192.168.15.155",
+                              "sensitive": false
+                            },
+                            "revision": {
+                              "version": 0
+                            }
+                          }
+                        ]
+                      }
+                    }'
           EOF
+
           
