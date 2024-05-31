@@ -29,8 +29,8 @@ jobs:
           script: |
             ssh -o StrictHostKeyChecking=no \
                 -i /home/ubuntu/.ssh/ssh_key.pem \
-                -t ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST_NIFI }} \
-                "sudo docker pull ${{ secrets.FOODWAY_USER_DOCKERHUB }}/nifi-foodway:latest && sudo docker run -d -p 8080:8080 -p 8444:8443 --name nifi-foodway ${{ secrets.FOODWAY_USER_DOCKERHUB }}/nifi-foodway:latest"
+                ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST_NIFI }} \
+                "sudo docker pull "${{ secrets.FOODWAY_USER_DOCKERHUB }}"/nifi-foodway:latest && sudo docker run -d -p 8080:8080 -p 8443:8443 --name nifi-foodway "${{ secrets.FOODWAY_USER_DOCKERHUB }}"/nifi-foodway:latest"
 
       - name: Check if NiFi instance is up
         run: |
@@ -44,7 +44,7 @@ jobs:
       - name: Create Parameter Context in NiFi
         run: |
           curl --request POST \
-            --url http://${{ secrets.SERVER_HOST_NIFI }}:8444/nifi-api/parameter-contexts \
+            --url http://${{ secrets.SERVER_HOST_NIFI }}:8443/nifi-api/parameter-contexts \
             --header 'Content-Type: application/json' \
             --data '{
               "revision": {
