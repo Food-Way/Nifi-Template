@@ -49,7 +49,7 @@ jobs:
 
       - name: Create Parameter Context in NiFi
         run: |
-            ssh -o StrictHostKeyChecking=no \
+            sudo ssh -o StrictHostKeyChecking=no \
                 -i /home/ubuntu/.ssh/ssh_key.pem \
                 ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST_NIFI }} << 'EOF'
             curl --request POST \
