@@ -14,7 +14,7 @@ jobs:
       - name: Copy Template.xml to Bastion Host
         uses: appleboy/scp-action@v0.1.3
         with:
-          source: ./SMTP_template.xml
+          source: SMTP_template.xml
           target: ${{ secrets.BASTION_USER }}@${{ secrets.BASTION_HOST }}:/home/ubuntu/Template.xml
           key: ${{ secrets.BASTION_SSH_KEY }}
           port: 22
