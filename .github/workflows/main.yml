@@ -47,76 +47,18 @@ jobs:
             echo "NiFi is down"
           fi
 
-      - name: Create Parameter Context in NiFi
-        run: |
-          sudo ssh -o StrictHostKeyChecking=no \
-                  -i ~/home/ubuntu/.ssh/ssh_key.pem \
-                  -tt -J ${{ secrets.BASTION_USER }}@${{ secrets.BASTION_HOST }} \
-                  ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST_NIFI }} << 'EOF'
-          sudo curl --request POST \
-                    --url http://${{ secrets.SERVER_HOST_NIFI }}:8443/nifi-api/parameter-contexts \
-                    --header 'Content-Type: application/json' \
-                    --data '{
-                      "revision": {
-                        "version": 0
-                      },
-                      "component": {
-                        "id": "b2a54d17-381e-4ba0-9529-3e6e2fc72165",
-                        "name": "prod2",
-                        "parameters": [
-                          {
-                            "parameter": {
-                              "name": "smtp.user",
-                              "value": "foodway.staff@gmail.com",
-                              "sensitive": false
-                            },
-                            "revision": {
-                              "version": 0
-                            }
-                          },
-                          {
-                            "parameter": {
-                              "name": "smtp.pass",
-                              "value": "gher tyvq qxwj gxia",
-                              "sensitive": true
-                            },
-                            "revision": {
-                              "version": 0
-                            }
-                          },
-                          {
-                            "parameter": {
-                              "name": "amqp.user",
-                              "value": "foodway",
-                              "sensitive": false
-                            },
-                            "revision": {
-                              "version": 0
-                            }
-                          },
-                          {
-                            "parameter": {
-                              "name": "amqp.pass",
-                              "value": "GfFoodway",
-                              "sensitive": true
-                            },
-                            "revision": {
-                              "version": 0
-                            }
-                          },
-                          {
-                            "parameter": {
-                              "name": "amqp.ip",
-                              "value": "192.168.15.155",
-                              "sensitive": false
-                            },
-                            "revision": {
-                              "version": 0
-                            }
-                          }
-                        ]
-                      }
-                    }'
-          EOF
+      - name: Deploy to Private backend-01 Server via Bastion Host
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.BASTION_HOST }}
+          username: ${{ secrets.BASTION_USER }}
+          key: ${{ secrets.BASTION_SSH_KEY }}
+          script: |
+            ssh -o StrictHostKeyChecking=no \
+                -i /home/ubuntu/.ssh/ssh_key.pem \
+                -t ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST_NIFI }} \
+                "ls"
+
+      
 
           
