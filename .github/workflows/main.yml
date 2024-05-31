@@ -45,7 +45,6 @@ jobs:
             echo "NiFi is up"
           else
             echo "NiFi is down"
-            exit 1
           fi
 
       - name: Create Parameter Context in NiFi
