@@ -30,7 +30,7 @@ jobs:
             ssh -o StrictHostKeyChecking=no \
                 -i /home/ubuntu/.ssh/ssh_key.pem \
                 -t ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST_NIFI }} \
-                "sudo docker pull ${FOODWAY_USER_DOCKERHUB}/nifi-foodway:latest && sudo docker run -d -p 8080:8080 -p 8444:8443 --name nifi-foodway ${FOODWAY_USER_DOCKERHUB}/nifi-foodway:latest"
+                "sudo docker pull ${{ secrets.FOODWAY_USER_DOCKERHUB }}/nifi-foodway:latest && sudo docker run -d -p 8080:8080 -p 8444:8443 --name nifi-foodway ${{ secrets.FOODWAY_USER_DOCKERHUB }}/nifi-foodway:latest"
 
       - name: Check if NiFi instance is up
         run: |
