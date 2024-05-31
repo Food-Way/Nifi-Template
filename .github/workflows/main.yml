@@ -16,9 +16,9 @@ jobs:
 
       - name: Push Docker Image
         run: |
-          echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-          docker tag nifi-foodway:latest foodway/nifi-foodway:latest
-          docker push foodway/nifi-foodway:latest
+          echo "${{ secrets.FOODWAY_PASSWORD_DOCKERHUB }}" | docker login -u "${{ secrets.FOODWAY_USER_DOCKERHUB }}" --password-stdin
+          docker tag nifi-foodway:latest "${{ secrets.FOODWAY_USER_DOCKERHUB }}"/nifi-foodway:latest
+          docker push "${{ secrets.FOODWAY_USER_DOCKERHUB }}"/nifi-foodway:latest
 
       - name: Deploy NiFi on EC2 via Bastion Host
         uses: appleboy/ssh-action@v1.0.3
@@ -30,7 +30,7 @@ jobs:
             ssh -o StrictHostKeyChecking=no \
                 -i /home/ubuntu/.ssh/ssh_key.pem \
                 -t ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST_NIFI }} \
-                "docker pull your-docker-repo/custom-nifi:latest && docker run -d -p 8080:8080 -p 8443:8443 --name custom-nifi your-docker-repo/custom-nifi:latest"
+                "docker pull "${{ secrets.FOODWAY_USER_DOCKERHUB }}"/nifi-foodway:latest && docker run -d -p 8080:8080 -p 8443:8443 --name nifi-foodway "${{ secrets.FOODWAY_USER_DOCKERHUB }}"/nifi-foodway:latest"
 
       - name: Check if NiFi instance is up
         run: |
